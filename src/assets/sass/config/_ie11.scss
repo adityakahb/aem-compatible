@@ -1,0 +1,7 @@
+@media all and (-ms-high-contrast:none) {
+  // *::-ms-backdrop, .d-flex { width: 100%; } /* IE11 */
+  *::-ms-backdrop, .row > * {
+    padding-left: calc(5rem / 2);
+    padding-right: calc(5rem / 2);
+  }
+}

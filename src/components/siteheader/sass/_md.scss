@@ -1,3 +1,14 @@
-h1 {
-    color: #555555;
+.siteheader {
+  .header-nav {
+    height: 72px;
+    .col > button {
+      font-size: rem(32px);
+    }
+    .site-logo {
+      a {
+        height: 56px;
+        width: 56px;
+      }
+    }
+  }
 }

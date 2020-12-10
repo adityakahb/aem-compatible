@@ -33,24 +33,24 @@ $theme-colors: (
 $font-family-sans-serif: 'Montserrat', sans-serif;;
 
 $grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
+  xs: em(0),
+  sm: em(576px),
+  md: em(768px),
+  lg: em(992px),
+  xl: em(1200px),
+  xxl: em(1400px)
 );
 
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1320px
+  sm: rem(560px), // 35
+  md: rem(720px), // 45
+  lg: rem(960px), // 60
+  xl: rem(1160px), // 72.5
+  xxl: rem(1320px) // 82.5
 );
 
 $grid-columns:                12;
-$grid-gutter-width:           rem(32px);
+$grid-gutter-width:           rem(16px);
 $grid-row-columns:            6;
 
 $xs: map-get($grid-breakpoints, 'xs');

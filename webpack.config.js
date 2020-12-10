@@ -26,6 +26,7 @@ module.exports = (env, argv) => {
       }
     },
     devtool: false,
+    target: ['web', 'es5'],
     module: {
       rules: [{
           test: /\.es.js$/,
@@ -56,10 +57,6 @@ module.exports = (env, argv) => {
       ]
     },
     plugins: [
-      new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery: "jquery"
-      }),
       new MiniCssExtractPlugin({
         filename: '[name].css',
       }),
