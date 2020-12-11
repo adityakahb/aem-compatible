@@ -53,10 +53,16 @@ module.exports = (env, argv) => {
               }
             },
           ]
-        }
+        },
       ]
     },
     plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery',
+        Popper: ['popper.js', 'default']
+      }),
       new MiniCssExtractPlugin({
         filename: '[name].css',
       }),
@@ -71,10 +77,10 @@ module.exports = (env, argv) => {
       }),
       new RemovePlugin({
         before: {
-          // parameters for "before normal compilation" stage.
+          // parameters for 'before normal compilation' stage.
         },
         watch: {
-          // parameters for "before watch compilation" stage.
+          // parameters for 'before watch compilation' stage.
         },
         after: {
           test: [{

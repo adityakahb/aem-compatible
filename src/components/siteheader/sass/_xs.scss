@@ -2,7 +2,7 @@
     .header-nav {
         max-width: 640px;
         margin: 0 auto;
-        height: 56px;
+        height: 64px;
         .col > button {
             background-color: transparent;
             border: 0;
@@ -11,6 +11,12 @@
             padding: 0;
             width: 44px;
             font-size: rem(24px);
+        }
+        button {
+            @include transition($transition-base);
+            &.active, &[aria-expanded="true"] {
+                color: $primary;
+            }
         }
         .site-logo {
             a {
