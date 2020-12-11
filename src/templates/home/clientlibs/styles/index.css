@@ -40,11 +40,11 @@ body {
 .main-wrapper {
   box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.75); }
 
-.light-theme {
+[data-theme="light"] {
   background-color: #e9ecef;
   color: #212529; }
 
-.dark-theme {
+[data-theme="dark"] {
   background-color: #212529;
   color: #e9ecef; }
 

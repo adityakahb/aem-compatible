@@ -32,4 +32,14 @@
             }
         }
     }
+    &, &[data-theme="light"] {
+        button {
+            color: $black;
+        }
+    }
+    &[data-theme="dark"] {
+        button {
+            color: $white;
+        }
+    }
 }

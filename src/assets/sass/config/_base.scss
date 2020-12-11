@@ -34,11 +34,11 @@ body {
 .main-wrapper {
   box-shadow: rem(0px 4px 8px 0px) rgba($black, 0.75);
 }
-.light-theme {
+[data-theme="light"] {
   background-color: $gray-200;
   color: $gray-900;
 }
-.dark-theme {
+[data-theme="dark"] {
   background-color: $gray-900;
   color: $gray-200;
 }
