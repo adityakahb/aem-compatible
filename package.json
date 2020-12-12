@@ -30,7 +30,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@splidejs/splide": "^2.4.21",
-    "amegmen": "^1.0.3",
+    "amegmen": "^1.0.4",
     "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",
     "moment": "^2.29.1",
