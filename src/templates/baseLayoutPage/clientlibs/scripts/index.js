@@ -1234,7 +1234,6 @@ var SiteHeader = function SiteHeader() {
     var amegmen_instance = amegmen__WEBPACK_IMPORTED_MODULE_1___default().Root.getInstance();
     var amegmen_options = {};
     amegmen_instance.init("#__amegmen_root", amegmen_options);
-    console.log('==========amegmen_instance', amegmen_instance);
   });
 };
 

@@ -53,6 +53,12 @@ body {
   line-height: inherit;
   vertical-align: top; }
 
+main {
+  padding-top: 64px; }
+  @media (min-width: 48em) {
+    main {
+      padding-top: 96px; } }
+
 body {
   font-size: 14px; }
   @media (min-width: 300px) {

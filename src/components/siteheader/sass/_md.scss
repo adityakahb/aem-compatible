@@ -1,3 +1,53 @@
+.__amegmen {
+  header, .__amegmen--main, .__amegmen--panel {
+    max-width: 384px;
+    width: 50%;
+  }
+  .__amegmen--main {
+    display: flex;
+    height: calc(100% - 96px);
+  }
+  header {
+    height: 96px;
+  }
+  .__amegmen--panel {
+    height: calc(100% - 96px);
+    top: 96px;
+  }
+}
+// .__amegmen {
+//   .__amegmen--canvas {
+//     height: auto;
+//     left: 0;
+//     position: absolute;
+//     top: 96px;
+//     transform: translate(0, -26px);
+//     visibility: hidden;
+//     opacity: 0;
+//     &.active {
+//       visibility: visible;
+//       opacity: 1;
+//     }
+//   }
+//   .__amegmen--main {
+//     & > ul {
+//       display: flex;
+//       flex-direction: row;
+//       & > li {
+//         padding: 16px;
+//       }
+//     }
+//   }
+//   .__amegmen--anchor-l0 {
+//     padding: 8;
+//     i {
+//       display: none;
+//     }
+//   }
+//   header {
+//     display: none;
+//   }
+// }
 .siteheader {
   .header-nav {
     height: 96px;
