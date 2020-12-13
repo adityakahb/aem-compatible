@@ -1,0 +1,15 @@
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+  &.tall-as-device {
+    height: calc(100vh - #{$headerMobileHeight});
+  }
+  &.half-n-half {
+    flex-direction: row;
+    .half-on-left, .half-on-right {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+  }
+}

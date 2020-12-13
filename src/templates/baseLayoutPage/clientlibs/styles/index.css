@@ -8489,6 +8489,22 @@ a.text-dark:hover, a.text-dark:focus {
     pointer-events: none;
     background-color: transparent; }
 
+.section-wrapper {
+  display: flex;
+  flex-direction: column; }
+  .section-wrapper.tall-as-device {
+    height: calc(100vh - 64px); }
+  .section-wrapper.half-n-half {
+    flex-direction: row; }
+    .section-wrapper.half-n-half .half-on-left, .section-wrapper.half-n-half .half-on-right {
+      display: flex;
+      flex-direction: column;
+      width: 50%; }
+
+@media (min-width: 48em) {
+  .section-wrapper.tall-as-device {
+    height: calc(100vh - 96px); } }
+
 .__amegmen .__amegmen--canvas {
   transition: all 0.2s ease-in-out;
   height: 100%;

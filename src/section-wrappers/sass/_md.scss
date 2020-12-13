@@ -1,0 +1,5 @@
+.section-wrapper {
+  &.tall-as-device {
+    height: calc(100vh - #{$headerDesktopHeight});
+  }
+}
