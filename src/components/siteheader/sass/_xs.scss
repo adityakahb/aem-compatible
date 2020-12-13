@@ -60,7 +60,7 @@
   header {
     align-items: center;
     display: flex;
-    height: 64px;
+    height: $headerMobileHeight;
     justify-content: left;
     padding: rem(10px 14px);
   }
@@ -68,18 +68,18 @@
   .__amegmen--main {
     display: flex;
     flex-direction: column;
-    height: calc(100% - 64px);
+    height: calc(100% - #{$headerMobileHeight});
   }
 
   .__amegmen--panel {
     @include transition($transition-base);
-    height: calc(100% - 64px);
+    height: calc(100% - #{$headerMobileHeight});
     left: 0;
     opacity: 0;
     overflow: hidden;
     position: absolute;
     text-align: left;
-    top: 64px;
+    top: $headerMobileHeight;
     transform: translate(-100.5%, 0);
     visibility: hidden;
     width: 100%;
@@ -108,7 +108,7 @@
   .header-nav {
     max-width: 640px;
     margin: 0 auto;
-    height: 64px;
+    height: $headerMobileHeight;
 
     #siteAccountButton {
       position: relative;
@@ -168,7 +168,7 @@
       color: $black;
       &.active, &[aria-expanded="true"] {
         &, &#siteAccountButton {
-          background-color: $gray-800;
+          background-color: $white;
         }
       }
     }
@@ -188,7 +188,7 @@
       color: $white;
       &.active, &[aria-expanded="true"] {
         &, &#siteAccountButton {
-          background-color: $gray-200;
+          background-color: $black;
         }
       }
     }

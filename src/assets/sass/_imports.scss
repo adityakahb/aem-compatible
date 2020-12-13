@@ -1,6 +1,6 @@
 @import './config/rem';
 @import './config/em';
-@import './config/colors';
+@import './config/variables';
 
 $theme-colors: (
   "primary":    $primary,
@@ -13,23 +13,6 @@ $theme-colors: (
   "dark":       $dark
 );
 
-// $grid-breakpoints: (
-//   xs: 0,
-//   sm: em(572px),
-//   md: em(742px),
-//   lg: em(992px),
-//   xl: em(1172px),
-//   xxl: em(1632px)
-// );
-
-// $container-max-widths: (
-//   sm: rem(540px),
-//   md: rem(720px),
-//   lg: rem(960px),
-//   xl: rem(1140px),
-//   xxl: rem(1600px)
-// );
-
 $font-family-sans-serif: 'Prompt', sans-serif;;
 
 $grid-breakpoints: (
@@ -38,7 +21,7 @@ $grid-breakpoints: (
   md: em(768px),
   lg: em(992px),
   xl: em(1200px),
-  xxl: em(1400px)
+  xxl: em(1392px)
 );
 
 $container-max-widths: (

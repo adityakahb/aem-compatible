@@ -48,8 +48,8 @@ body {
   vertical-align: top;
 }
 main {
-  padding-top: 64px;
+  padding-top: $headerMobileHeight;
   @media (min-width: $md) {
-    padding-top: 96px;
+    padding-top: $headerDesktopHeight;
   }
 }
