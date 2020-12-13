@@ -29,8 +29,8 @@ module.exports = (env, argv) => {
     target: ['web', 'es5'],
     module: {
       rules: [{
-          test: /\.es.js$/,
-          exclude: /node_modules/,
+          test: /\.m?js$/,
+          exclude: /(node_modules|bower_components)/,
           use: {
             loader: 'babel-loader'
           }

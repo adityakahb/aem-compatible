@@ -12,9 +12,11 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.12.10",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.12.10",
+    "@babel/runtime-corejs3": "^7.12.5",
     "babel-loader": "^8.2.2",
+    "core-js": "^3.8.1",
     "css-loader": "^5.0.1",
     "eslint": "^7.15.0",
     "glob": "^7.1.6",
@@ -28,12 +30,12 @@
     "webpack-cli": "^4.2.0"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1",
-    "@splidejs/splide": "^2.4.21",
+    "@babel/runtime": "^7.12.5",
     "amegmen": "^1.0.4",
     "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",
     "moment": "^2.29.1",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "swiper": "^6.4.1"
   }
 }

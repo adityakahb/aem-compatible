@@ -1,4 +1,7 @@
-import SiteHeader from './../../../../components/siteheader/_index.es';
+import "core-js/stable";
+import SiteHeader from '../../../../components/siteheader/_index.es';
 
-const siteheader = new SiteHeader();
-siteheader.init();
+document.addEventListener( 'DOMContentLoaded', function () {
+  const siteheader = new SiteHeader();
+  siteheader.__init();
+});
