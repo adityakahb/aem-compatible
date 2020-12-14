@@ -1,21 +1,48 @@
 <div class="hero-slider" data-theme="light">
-  <!-- Slider main container -->
+  <!-- Swiper -->
   <div class="swiper-container">
-    <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">
+        <div class="bg-img-wrap">
+          <picture>
+            <source media="(min-width: 1200px)"
+              data-srcset="https://via.placeholder.com/1280x720/585858/F8146A 1x, https://via.placeholder.com/2560x1440/585858/F8146A 2x">
+            <source media="(min-width: 750px)"
+              data-srcset="https://via.placeholder.com/1040x585/585858/F8146A 1x, https://via.placeholder.com/2080x1170/585858/F8146A 2x">
+            <img alt="Alt definition required" class="bg-img-wrap-src lazyload" src="https://via.placeholder.com/450x800/585858/F8146A"
+              data-srcset="https://via.placeholder.com/450x800/585858/F8146A 1x, https://via.placeholder.com/900x1600/585858/F8146A 2x">
+          </picture>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe data-src="//www.youtube.com/embed/ZfV-aYdU4uE?enablejsapi=1" class="embed-responsive-item lazyload" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="bg-img-wrap">
+          <picture>
+            <source media="(min-width: 1200px)"
+              data-srcset="https://via.placeholder.com/1280x720/003658/F8146A 1x, https://via.placeholder.com/2560x1440/003658/F8146A 2x">
+            <source media="(min-width: 750px)"
+              data-srcset="https://via.placeholder.com/1040x585/003658/F8146A 1x, https://via.placeholder.com/2080x1170/003658/F8146A 2x">
+            <img alt="Alt definition required" class="bg-img-wrap-src lazyload" src="https://via.placeholder.com/450x800/003658/F8146A"
+              data-srcset="https://via.placeholder.com/450x800/003658/F8146A 1x, https://via.placeholder.com/900x1600/003658/F8146A 2x">
+          </picture>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="embed-responsive embed-responsive-4by3">
+          <iframe data-src="//www.youtube.com/embed/mM5_T-F1Yn4?enablejsapi=1" class="embed-responsive-item lazyload" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
-
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-
-    <!-- If we need scrollbar -->
-    <div class="swiper-scrollbar"></div>
+    <!-- Add Arrows -->
+    <button class="btn btn-info swiper-button-next">
+      <i class="material-icons-outlined">chevron_right</i>
+    </button>
+    <button class="btn btn-info swiper-button-prev">
+      <i class="material-icons-outlined">chevron_left</i>
+    </button>
   </div>
 </div>

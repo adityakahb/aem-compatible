@@ -34,7 +34,9 @@
     "amegmen": "^1.0.4",
     "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",
+    "lazysizes": "^5.2.2",
     "moment": "^2.29.1",
+    "picturefill": "^3.0.3",
     "popper.js": "^1.16.1",
     "swiper": "^6.4.1"
   }

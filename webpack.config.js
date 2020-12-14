@@ -1,5 +1,4 @@
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const fs = require('fs');
 const glob = require('glob');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
@@ -10,15 +9,15 @@ const webpack = require('webpack');
 const devExtraFiles = new RegExp(/(\.css\.js|\.css\.js\.map)$/, 'm');
 const prodExtraFiles = new RegExp(/(\.css\.js|\.css\.js\.map|\.js\.map|\.css\.map)$/, 'm');
 
-console.log(glob.sync(`{./src/templates/**/*.es.js,./src/templates/**/*.scss}`).reduce((x, y) => Object.assign(x, {
-  [removeFilePart(y) + '/index']: y,
-}), {}));
+console.log(glob.sync(`{./src/templates/**/head-scripts.es.js,./src/templates/**/index.es.js,./src/templates/**/*.scss}`).reduce((x, y) => {
+  return path.basename(y).indexOf('head-scripts.es') < 0 ? Object.assign(x, { [removeFilePart(y) + '/index']: y }) : Object.assign(x, {[removeFilePart(y) + '/head-scripts']: y})
+}, {}));
 
 module.exports = (env, argv) => {
   return {
-    entry: glob.sync(`{./src/templates/**/*.es.js,./src/templates/**/*.scss}`).reduce((x, y) => Object.assign(x, {
-      [removeFilePart(y) + '/index']: y,
-    }), {}),
+    entry: glob.sync(`{./src/templates/**/head-scripts.es.js,./src/templates/**/index.es.js,./src/templates/**/*.scss}`).reduce((x, y) => {
+      return path.basename(y).indexOf('head-scripts.es') < 0 ? Object.assign(x, { [removeFilePart(y) + '/index']: y }) : Object.assign(x, {[removeFilePart(y) + '/head-scripts']: y})
+    }, {}),
     output: {
       path: path.resolve(__dirname),
       filename: (pathData) => {

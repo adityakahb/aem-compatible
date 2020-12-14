@@ -5,27 +5,11 @@ export default class HeroSlider {
     Swiper.use([Navigation, Pagination]);
   }
   __init() {
-    // configure Swiper to use modules
-    // init Swiper:
     new Swiper('.swiper-container', {
-      // Optional parameters
-      direction: 'vertical',
-      loop: true,
-    
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    
-      // Navigation arrows
+      loop: false,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-      },
-    
-      // And if we need scrollbar
-      scrollbar: {
-        el: '.swiper-scrollbar',
       },
     })    
   }

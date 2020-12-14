@@ -2,4 +2,22 @@
   &.tall-as-device {
     height: calc(100vh - #{$headerDesktopHeight});
   }
+  &.half-n-half {
+    flex-direction: row;
+    .half-on-left, .half-on-right {
+      width: 50%;
+    }
+    .half-on-left {
+      align-items: flex-end;
+      padding-left: rem(16px);
+    }
+    .half-on-right {
+      align-items: flex-start;
+      padding-right: rem(16px);
+    }
+    .half-content {
+      max-width: 608px;
+      width: 100%;
+    }
+  }
 }

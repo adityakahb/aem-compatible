@@ -33,7 +33,7 @@ $container-max-widths: (
 );
 
 $grid-columns:                12;
-$grid-gutter-width:           rem(16px);
+$grid-gutter-width:           rem(32px);
 $grid-row-columns:            6;
 
 $xs: map-get($grid-breakpoints, 'xs');
@@ -44,16 +44,13 @@ $xl: map-get($grid-breakpoints, 'xl');
 $xxl: map-get($grid-breakpoints, 'xxl');
 
 $spacer: rem(16px);
-$spacers: ();
 $spacers: (
   0: 0,
-  1: ($spacer / 4),
-  2: ($spacer / 2),
+  1: $spacer / 4,
+  2: $spacer / 2,
   3: $spacer,
-  4: ($spacer * 1.5),
-  5: ($spacer * 3),
-  6: ($spacer * 4.5),
-  7: ($spacer * 5)
+  4: $spacer * 2,
+  5: $spacer * 4,
 );
 
 $breadcrumb-divider: '\279C';

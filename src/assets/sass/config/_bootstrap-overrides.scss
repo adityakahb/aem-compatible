@@ -10,10 +10,24 @@
     }
   }
 
+  hr {
+    border-top: 1px solid rgba($white, 0.1);
+  }
+
+  .btn {
+    @include hover() {
+      text-decoration: none;
+    }
+  }
 
   @each $color, $value in $theme-colors {
     .btn-#{$color} {
       @include button-variant-dark($value, $value);
+    }
+    @each $color, $value in $theme-colors {
+      .btn-outline-#{$color} {
+        @include button-outline-variant-dark($value);
+      }
     }
   }
 
@@ -51,5 +65,13 @@
         background-image: none;
       }
     }
+  }
+}
+// .embed-responsive , .embed-responsive iframe, .embed-responsive embed, .embed-responsive object, .embed-responsive video
+.embed-responsive {
+  background-color: $black;
+  .embed-responsive-item, iframe, embed, object, video {
+    @include center-center();
+    // height: auto;
   }
 }

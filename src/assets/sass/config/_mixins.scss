@@ -1,23 +1,58 @@
+@mixin top-left() {
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translate(0, 0);
+}
+@mixin top-center() {
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, 0);
+}
+@mixin top-right() {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(0, 0);
+}
+@mixin center-left() {
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
 @mixin center-center() {
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-
-@mixin top-center() {
+@mixin center-right() {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+@mixin bottom-left() {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  transform: translate(0, 0);
+}
+@mixin bottom-center() {
+  bottom: 0;
   left: 50%;
   position: absolute;
-  top: 0%;
-  transform: translate(-50%, -0%);
+  transform: translate(-50%, 0);
+}
+@mixin bottom-right() {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  transform: translate(0, 0);
 }
 
-@mixin top-right() {
-  left: 100%;
-  position: absolute;
-  top: 0%;
-  transform: translate(-100%, -0%);
-}
 
 @mixin word-wrap() {
   overflow-wrap: break-word;
@@ -108,6 +143,45 @@
       } @else {
         // Avoid using mixin so we can pass custom focus shadow properly
         box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+      }
+    }
+  }
+}
+
+@mixin button-outline-variant-dark($color, $color-hover: color-yiq($color), $active-background: $color, $active-border: $color) {
+  color: $color;
+  border-color: $color;
+
+  @include hover() {
+    color: $color-hover;
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $color;
+    background-color: transparent;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: color-yiq($active-background);
+    background-color: $active-background;
+    border-color: $active-border;
+
+    &:focus {
+      @if $enable-shadows and $btn-active-box-shadow != none {
+        @include box-shadow($btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($color, .5));
+      } @else {
+        // Avoid using mixin so we can pass custom focus shadow properly
+        box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
       }
     }
   }

@@ -1,5 +1,4 @@
 module.exports = function (api) {
-  console.log('=====================is this working?====================')
   api.cache(true);
 
   const presets = [

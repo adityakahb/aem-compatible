@@ -14,5 +14,7 @@ node_modules/
 .Trashes
 ehthumbs.db
 Thumbs.db
+src/**/*.css.map
+src/**/*.js.map
 
 package-lock.json
