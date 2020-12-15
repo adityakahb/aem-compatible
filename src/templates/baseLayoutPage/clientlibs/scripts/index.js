@@ -43,6 +43,32 @@ module.exports = _createClass;
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/typeof.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/typeof.js ***!
+  \*******************************************************/
+/***/ (function(module) {
+
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    module.exports = _typeof = function _typeof(obj) {
+      return typeof obj;
+    };
+  } else {
+    module.exports = _typeof = function _typeof(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
+module.exports = _typeof;
+
+/***/ }),
+
 /***/ "./node_modules/amegmen/dist/scripts/amegmen.js":
 /*!******************************************************!*\
   !*** ./node_modules/amegmen/dist/scripts/amegmen.js ***!
@@ -1247,6 +1273,145 @@ if (true) {
 
 /***/ }),
 
+/***/ "./src/assets/scripts/_constants.es.js":
+/*!*********************************************!*\
+  !*** ./src/assets/scripts/_constants.es.js ***!
+  \*********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "_LandscapeCSSClass": function() { return /* binding */ _LandscapeCSSClass; },
+/* harmony export */   "_PortraitCSSClass": function() { return /* binding */ _PortraitCSSClass; },
+/* harmony export */   "_GetElemDimensions": function() { return /* binding */ _GetElemDimensions; },
+/* harmony export */   "_StringTrim": function() { return /* binding */ _StringTrim; },
+/* harmony export */   "_ArrayCall": function() { return /* binding */ _ArrayCall; },
+/* harmony export */   "_HasClass": function() { return /* binding */ _HasClass; },
+/* harmony export */   "_AddClass": function() { return /* binding */ _AddClass; },
+/* harmony export */   "_RemoveClass": function() { return /* binding */ _RemoveClass; }
+/* harmony export */ });
+/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
+/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_join__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.join */ "./node_modules/core-js/modules/es.array.join.js");
+/* harmony import */ var core_js_modules_es_array_join__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_join__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
+/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_array_splice__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.splice */ "./node_modules/core-js/modules/es.array.splice.js");
+/* harmony import */ var core_js_modules_es_array_splice__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_splice__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.regexp.exec */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "./node_modules/@babel/runtime/helpers/typeof.js");
+/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_7__);
+
+
+
+
+
+
+
+
+var _LandscapeCSSClass = 'is-landscape';
+var _PortraitCSSClass = 'is-portrait';
+var _GetElemDimensions = function _GetElemDimensions(elem) {
+  try {
+    var docElem,
+        win,
+        box = {
+      top: 0,
+      left: 0
+    },
+        doc = elem && elem.ownerDocument;
+
+    var isWindow = function isWindow(obj) {
+      return obj != null && obj === obj.window;
+    };
+
+    var getWindow = function getWindow(elem) {
+      return isWindow(elem) ? elem : elem.nodeType === 9 && elem.defaultView;
+    };
+
+    docElem = doc.documentElement;
+
+    if (_babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_7___default()(elem.getBoundingClientRect) !== ( true ? "undefined" : 0)) {
+      box = elem.getBoundingClientRect();
+    }
+
+    win = getWindow(doc);
+    return {
+      top: box.top + win.pageYOffset - docElem.clientTop,
+      left: box.left + win.pageXOffset - docElem.clientLeft,
+      width: box.width ? box.width : 0,
+      height: box.height ? box.height : 0
+    };
+  } catch (e) {
+    return {
+      top: 0,
+      left: 0,
+      width: 0,
+      height: 0
+    };
+  }
+};
+var _StringTrim = function _StringTrim(str) {
+  return str.replace(/^\s+|\s+$/g, '');
+};
+var _ArrayCall = function _ArrayCall(arr) {
+  try {
+    return Array.prototype.slice.call(arr);
+  } catch (e) {
+    return [];
+  }
+};
+var _HasClass = function _HasClass(element, cls) {
+  if (element) {
+    var clsarr = element.className.split(' ');
+    return clsarr.indexOf(cls) > -1 ? true : false;
+  }
+
+  return false;
+};
+var _AddClass = function _AddClass(element, cls) {
+  if (element) {
+    var clsarr = cls.split(' ');
+    var clsarrLength = clsarr.length;
+
+    for (var i = 0; i < clsarrLength; i++) {
+      var thiscls = clsarr[i];
+
+      if (!_HasClass(element, thiscls)) {
+        element.className += ' ' + thiscls;
+      }
+    }
+
+    element.className = _StringTrim(element.className);
+  }
+};
+var _RemoveClass = function _RemoveClass(element, cls) {
+  if (element) {
+    var clsarr = cls.split(' ');
+    var curclass = element.className.split(' ');
+    var curclassLength = curclass.length;
+
+    for (var i = 0; i < curclassLength; i++) {
+      var thiscls = curclass[i];
+
+      if (clsarr.indexOf(thiscls) > -1) {
+        curclass.splice(i, 1);
+        i--;
+      }
+    }
+
+    element.className = _StringTrim(curclass.join(' '));
+  }
+};
+
+/***/ }),
+
 /***/ "./src/assets/scripts/_vendors.es.js":
 /*!*******************************************!*\
   !*** ./src/assets/scripts/_vendors.es.js ***!
@@ -1258,71 +1423,65 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ Vendors; }
 /* harmony export */ });
-/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.for-each */ "./node_modules/core-js/modules/es.array.for-each.js");
-/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.includes */ "./node_modules/core-js/modules/es.array.includes.js");
-/* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var core_js_stable__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/stable */ "./node_modules/core-js/stable/index.js");
-/* harmony import */ var core_js_stable__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_stable__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var picturefill__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! picturefill */ "./node_modules/picturefill/dist/picturefill.js");
-/* harmony import */ var picturefill__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(picturefill__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_stable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/stable */ "./node_modules/core-js/stable/index.js");
+/* harmony import */ var core_js_stable__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_stable__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
-
-
-
-
-
-
-var responsiveImages;
-var observer = new MutationObserver(function (changes) {
-  changes.forEach(function (change) {
-    if (change.attributeName.includes('src')) {
-      console.dir(img.src);
-    }
-  });
-});
 
 var Vendors = /*#__PURE__*/function () {
   function Vendors() {
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_5___default()(this, Vendors);
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Vendors);
   }
 
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_6___default()(Vendors, [{
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Vendors, [{
     key: "__init",
-    value: function __init() {
-      if (typeof (picturefill__WEBPACK_IMPORTED_MODULE_8___default()) === "function") {
-        picturefill__WEBPACK_IMPORTED_MODULE_8___default()();
-        responsiveImages = Array.prototype.slice.call(document.querySelectorAll('.bg-img-wrap picture img') || []);
-        responsiveImages.forEach(function (img) {
-          console.log('=========img', img);
-          var observer = new MutationObserver(function (changes) {
-            changes.forEach(function (change) {
-              if (change.attributeName.includes('src')) {
-                console.dir(img.src);
-              }
-            });
-          });
-          observer.observe(img, {
-            attributes: true
-          });
-        });
-      }
-    }
+    value: function __init() {}
   }]);
 
   return Vendors;
+}();
+
+
+
+/***/ }),
+
+/***/ "./src/components/sitefooter/_index.es.js":
+/*!************************************************!*\
+  !*** ./src/components/sitefooter/_index.es.js ***!
+  \************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ SiteFooter; }
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/js/dist/collapse */ "./node_modules/bootstrap/js/dist/collapse.js");
+/* harmony import */ var bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var SiteFooter = /*#__PURE__*/function () {
+  function SiteFooter() {
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, SiteFooter);
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(SiteFooter, [{
+    key: "__init",
+    value: function __init() {}
+  }]);
+
+  return SiteFooter;
 }();
 
 
@@ -1382,18 +1541,495 @@ var SiteHeader = /*#__PURE__*/function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _assets_scripts_vendors_es__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../../assets/scripts/_vendors.es */ "./src/assets/scripts/_vendors.es.js");
-/* harmony import */ var _components_siteheader_index_es__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../components/siteheader/_index.es */ "./src/components/siteheader/_index.es.js");
+/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.for-each */ "./node_modules/core-js/modules/es.array.for-each.js");
+/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
+/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_timers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.timers */ "./node_modules/core-js/modules/web.timers.js");
+/* harmony import */ var core_js_modules_web_timers__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_timers__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _assets_scripts_vendors_es__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../../../assets/scripts/_vendors.es */ "./src/assets/scripts/_vendors.es.js");
+/* harmony import */ var _components_siteheader_index_es__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../components/siteheader/_index.es */ "./src/components/siteheader/_index.es.js");
+/* harmony import */ var _components_sitefooter_index_es__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../components/sitefooter/_index.es */ "./src/components/sitefooter/_index.es.js");
+/* harmony import */ var _assets_scripts_constants_es__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../../../../assets/scripts/_constants.es */ "./src/assets/scripts/_constants.es.js");
 
+
+
+
+
+
+
+
+
+
+var bodyElem;
+var bgElements;
+var bgElementDimension;
+
+var GlobalScripts = /*#__PURE__*/function () {
+  function GlobalScripts() {
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_4___default()(this, GlobalScripts);
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_5___default()(GlobalScripts, [{
+    key: "reportWindowOrientation",
+    value: function reportWindowOrientation() {
+      setTimeout(function () {
+        if ((bgElements || []).length > 0) {
+          bgElements.forEach(function (element) {
+            bgElementDimension = (0,_assets_scripts_constants_es__WEBPACK_IMPORTED_MODULE_9__._GetElemDimensions)(element);
+
+            if (bgElementDimension.height > bgElementDimension.width) {
+              (0,_assets_scripts_constants_es__WEBPACK_IMPORTED_MODULE_9__._AddClass)(element, _assets_scripts_constants_es__WEBPACK_IMPORTED_MODULE_9__._PortraitCSSClass);
+
+              (0,_assets_scripts_constants_es__WEBPACK_IMPORTED_MODULE_9__._RemoveClass)(element, _assets_scripts_constants_es__WEBPACK_IMPORTED_MODULE_9__._LandscapeCSSClass);
+            }
+
+            if (bgElementDimension.height <= bgElementDimension.width) {
+              (0,_assets_scripts_constants_es__WEBPACK_IMPORTED_MODULE_9__._RemoveClass)(element, _assets_scripts_constants_es__WEBPACK_IMPORTED_MODULE_9__._PortraitCSSClass);
+
+              (0,_assets_scripts_constants_es__WEBPACK_IMPORTED_MODULE_9__._AddClass)(element, _assets_scripts_constants_es__WEBPACK_IMPORTED_MODULE_9__._LandscapeCSSClass);
+            }
+          });
+        }
+
+        if (bodyElem && window.innerHeight > window.innerWidth) {
+          (0,_assets_scripts_constants_es__WEBPACK_IMPORTED_MODULE_9__._AddClass)(bodyElem, _assets_scripts_constants_es__WEBPACK_IMPORTED_MODULE_9__._PortraitCSSClass);
+
+          (0,_assets_scripts_constants_es__WEBPACK_IMPORTED_MODULE_9__._RemoveClass)(bodyElem, _assets_scripts_constants_es__WEBPACK_IMPORTED_MODULE_9__._LandscapeCSSClass);
+        }
+
+        if (bodyElem && window.innerHeight <= window.innerWidth) {
+          (0,_assets_scripts_constants_es__WEBPACK_IMPORTED_MODULE_9__._RemoveClass)(bodyElem, _assets_scripts_constants_es__WEBPACK_IMPORTED_MODULE_9__._PortraitCSSClass);
+
+          (0,_assets_scripts_constants_es__WEBPACK_IMPORTED_MODULE_9__._AddClass)(bodyElem, _assets_scripts_constants_es__WEBPACK_IMPORTED_MODULE_9__._LandscapeCSSClass);
+        }
+      }, 0);
+    }
+  }, {
+    key: "__initHeader",
+    value: function __initHeader() {
+      var siteheader = new _components_siteheader_index_es__WEBPACK_IMPORTED_MODULE_7__.default();
+
+      siteheader.__init();
+    }
+  }, {
+    key: "__init",
+    value: function __init() {
+      bodyElem = document.querySelector('body');
+      bgElements = Array.prototype.slice.call(document.querySelectorAll('.bg-img-wrap') || []);
+      this.reportWindowOrientation();
+      window.addEventListener('resize', this.reportWindowOrientation, false);
+      var vendors = new _assets_scripts_vendors_es__WEBPACK_IMPORTED_MODULE_6__.default();
+      var sitefooter = new _components_sitefooter_index_es__WEBPACK_IMPORTED_MODULE_8__.default();
+
+      vendors.__init();
+
+      sitefooter.__init();
+    }
+  }]);
+
+  return GlobalScripts;
+}();
 
 document.addEventListener('DOMContentLoaded', function () {
-  var siteheader = new _components_siteheader_index_es__WEBPACK_IMPORTED_MODULE_1__.default();
-  var vendors = new _assets_scripts_vendors_es__WEBPACK_IMPORTED_MODULE_0__.default();
+  var globalscripts = new GlobalScripts();
 
-  vendors.__init();
-
-  siteheader.__init();
+  globalscripts.__initHeader();
 });
+window.addEventListener('load', function () {
+  var globalscripts = new GlobalScripts();
+
+  globalscripts.__init();
+});
+
+/***/ }),
+
+/***/ "./node_modules/bootstrap/js/dist/collapse.js":
+/*!****************************************************!*\
+  !*** ./node_modules/bootstrap/js/dist/collapse.js ***!
+  \****************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+/*!
+  * Bootstrap collapse.js v4.5.3 (https://getbootstrap.com/)
+  * Copyright 2011-2020 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+  */
+(function (global, factory) {
+   true ? module.exports = factory(__webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! ./util.js */ "./node_modules/bootstrap/js/dist/util.js")) :
+  0;
+}(this, (function ($, Util) { 'use strict';
+
+  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+  var $__default = /*#__PURE__*/_interopDefaultLegacy($);
+  var Util__default = /*#__PURE__*/_interopDefaultLegacy(Util);
+
+  function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+
+  var NAME = 'collapse';
+  var VERSION = '4.5.3';
+  var DATA_KEY = 'bs.collapse';
+  var EVENT_KEY = "." + DATA_KEY;
+  var DATA_API_KEY = '.data-api';
+  var JQUERY_NO_CONFLICT = $__default['default'].fn[NAME];
+  var Default = {
+    toggle: true,
+    parent: ''
+  };
+  var DefaultType = {
+    toggle: 'boolean',
+    parent: '(string|element)'
+  };
+  var EVENT_SHOW = "show" + EVENT_KEY;
+  var EVENT_SHOWN = "shown" + EVENT_KEY;
+  var EVENT_HIDE = "hide" + EVENT_KEY;
+  var EVENT_HIDDEN = "hidden" + EVENT_KEY;
+  var EVENT_CLICK_DATA_API = "click" + EVENT_KEY + DATA_API_KEY;
+  var CLASS_NAME_SHOW = 'show';
+  var CLASS_NAME_COLLAPSE = 'collapse';
+  var CLASS_NAME_COLLAPSING = 'collapsing';
+  var CLASS_NAME_COLLAPSED = 'collapsed';
+  var DIMENSION_WIDTH = 'width';
+  var DIMENSION_HEIGHT = 'height';
+  var SELECTOR_ACTIVES = '.show, .collapsing';
+  var SELECTOR_DATA_TOGGLE = '[data-toggle="collapse"]';
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
+
+  var Collapse = /*#__PURE__*/function () {
+    function Collapse(element, config) {
+      this._isTransitioning = false;
+      this._element = element;
+      this._config = this._getConfig(config);
+      this._triggerArray = [].slice.call(document.querySelectorAll("[data-toggle=\"collapse\"][href=\"#" + element.id + "\"]," + ("[data-toggle=\"collapse\"][data-target=\"#" + element.id + "\"]")));
+      var toggleList = [].slice.call(document.querySelectorAll(SELECTOR_DATA_TOGGLE));
+
+      for (var i = 0, len = toggleList.length; i < len; i++) {
+        var elem = toggleList[i];
+        var selector = Util__default['default'].getSelectorFromElement(elem);
+        var filterElement = [].slice.call(document.querySelectorAll(selector)).filter(function (foundElem) {
+          return foundElem === element;
+        });
+
+        if (selector !== null && filterElement.length > 0) {
+          this._selector = selector;
+
+          this._triggerArray.push(elem);
+        }
+      }
+
+      this._parent = this._config.parent ? this._getParent() : null;
+
+      if (!this._config.parent) {
+        this._addAriaAndCollapsedClass(this._element, this._triggerArray);
+      }
+
+      if (this._config.toggle) {
+        this.toggle();
+      }
+    } // Getters
+
+
+    var _proto = Collapse.prototype;
+
+    // Public
+    _proto.toggle = function toggle() {
+      if ($__default['default'](this._element).hasClass(CLASS_NAME_SHOW)) {
+        this.hide();
+      } else {
+        this.show();
+      }
+    };
+
+    _proto.show = function show() {
+      var _this = this;
+
+      if (this._isTransitioning || $__default['default'](this._element).hasClass(CLASS_NAME_SHOW)) {
+        return;
+      }
+
+      var actives;
+      var activesData;
+
+      if (this._parent) {
+        actives = [].slice.call(this._parent.querySelectorAll(SELECTOR_ACTIVES)).filter(function (elem) {
+          if (typeof _this._config.parent === 'string') {
+            return elem.getAttribute('data-parent') === _this._config.parent;
+          }
+
+          return elem.classList.contains(CLASS_NAME_COLLAPSE);
+        });
+
+        if (actives.length === 0) {
+          actives = null;
+        }
+      }
+
+      if (actives) {
+        activesData = $__default['default'](actives).not(this._selector).data(DATA_KEY);
+
+        if (activesData && activesData._isTransitioning) {
+          return;
+        }
+      }
+
+      var startEvent = $__default['default'].Event(EVENT_SHOW);
+      $__default['default'](this._element).trigger(startEvent);
+
+      if (startEvent.isDefaultPrevented()) {
+        return;
+      }
+
+      if (actives) {
+        Collapse._jQueryInterface.call($__default['default'](actives).not(this._selector), 'hide');
+
+        if (!activesData) {
+          $__default['default'](actives).data(DATA_KEY, null);
+        }
+      }
+
+      var dimension = this._getDimension();
+
+      $__default['default'](this._element).removeClass(CLASS_NAME_COLLAPSE).addClass(CLASS_NAME_COLLAPSING);
+      this._element.style[dimension] = 0;
+
+      if (this._triggerArray.length) {
+        $__default['default'](this._triggerArray).removeClass(CLASS_NAME_COLLAPSED).attr('aria-expanded', true);
+      }
+
+      this.setTransitioning(true);
+
+      var complete = function complete() {
+        $__default['default'](_this._element).removeClass(CLASS_NAME_COLLAPSING).addClass(CLASS_NAME_COLLAPSE + " " + CLASS_NAME_SHOW);
+        _this._element.style[dimension] = '';
+
+        _this.setTransitioning(false);
+
+        $__default['default'](_this._element).trigger(EVENT_SHOWN);
+      };
+
+      var capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1);
+      var scrollSize = "scroll" + capitalizedDimension;
+      var transitionDuration = Util__default['default'].getTransitionDurationFromElement(this._element);
+      $__default['default'](this._element).one(Util__default['default'].TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
+      this._element.style[dimension] = this._element[scrollSize] + "px";
+    };
+
+    _proto.hide = function hide() {
+      var _this2 = this;
+
+      if (this._isTransitioning || !$__default['default'](this._element).hasClass(CLASS_NAME_SHOW)) {
+        return;
+      }
+
+      var startEvent = $__default['default'].Event(EVENT_HIDE);
+      $__default['default'](this._element).trigger(startEvent);
+
+      if (startEvent.isDefaultPrevented()) {
+        return;
+      }
+
+      var dimension = this._getDimension();
+
+      this._element.style[dimension] = this._element.getBoundingClientRect()[dimension] + "px";
+      Util__default['default'].reflow(this._element);
+      $__default['default'](this._element).addClass(CLASS_NAME_COLLAPSING).removeClass(CLASS_NAME_COLLAPSE + " " + CLASS_NAME_SHOW);
+      var triggerArrayLength = this._triggerArray.length;
+
+      if (triggerArrayLength > 0) {
+        for (var i = 0; i < triggerArrayLength; i++) {
+          var trigger = this._triggerArray[i];
+          var selector = Util__default['default'].getSelectorFromElement(trigger);
+
+          if (selector !== null) {
+            var $elem = $__default['default']([].slice.call(document.querySelectorAll(selector)));
+
+            if (!$elem.hasClass(CLASS_NAME_SHOW)) {
+              $__default['default'](trigger).addClass(CLASS_NAME_COLLAPSED).attr('aria-expanded', false);
+            }
+          }
+        }
+      }
+
+      this.setTransitioning(true);
+
+      var complete = function complete() {
+        _this2.setTransitioning(false);
+
+        $__default['default'](_this2._element).removeClass(CLASS_NAME_COLLAPSING).addClass(CLASS_NAME_COLLAPSE).trigger(EVENT_HIDDEN);
+      };
+
+      this._element.style[dimension] = '';
+      var transitionDuration = Util__default['default'].getTransitionDurationFromElement(this._element);
+      $__default['default'](this._element).one(Util__default['default'].TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
+    };
+
+    _proto.setTransitioning = function setTransitioning(isTransitioning) {
+      this._isTransitioning = isTransitioning;
+    };
+
+    _proto.dispose = function dispose() {
+      $__default['default'].removeData(this._element, DATA_KEY);
+      this._config = null;
+      this._parent = null;
+      this._element = null;
+      this._triggerArray = null;
+      this._isTransitioning = null;
+    } // Private
+    ;
+
+    _proto._getConfig = function _getConfig(config) {
+      config = _extends({}, Default, config);
+      config.toggle = Boolean(config.toggle); // Coerce string values
+
+      Util__default['default'].typeCheckConfig(NAME, config, DefaultType);
+      return config;
+    };
+
+    _proto._getDimension = function _getDimension() {
+      var hasWidth = $__default['default'](this._element).hasClass(DIMENSION_WIDTH);
+      return hasWidth ? DIMENSION_WIDTH : DIMENSION_HEIGHT;
+    };
+
+    _proto._getParent = function _getParent() {
+      var _this3 = this;
+
+      var parent;
+
+      if (Util__default['default'].isElement(this._config.parent)) {
+        parent = this._config.parent; // It's a jQuery object
+
+        if (typeof this._config.parent.jquery !== 'undefined') {
+          parent = this._config.parent[0];
+        }
+      } else {
+        parent = document.querySelector(this._config.parent);
+      }
+
+      var selector = "[data-toggle=\"collapse\"][data-parent=\"" + this._config.parent + "\"]";
+      var children = [].slice.call(parent.querySelectorAll(selector));
+      $__default['default'](children).each(function (i, element) {
+        _this3._addAriaAndCollapsedClass(Collapse._getTargetFromElement(element), [element]);
+      });
+      return parent;
+    };
+
+    _proto._addAriaAndCollapsedClass = function _addAriaAndCollapsedClass(element, triggerArray) {
+      var isOpen = $__default['default'](element).hasClass(CLASS_NAME_SHOW);
+
+      if (triggerArray.length) {
+        $__default['default'](triggerArray).toggleClass(CLASS_NAME_COLLAPSED, !isOpen).attr('aria-expanded', isOpen);
+      }
+    } // Static
+    ;
+
+    Collapse._getTargetFromElement = function _getTargetFromElement(element) {
+      var selector = Util__default['default'].getSelectorFromElement(element);
+      return selector ? document.querySelector(selector) : null;
+    };
+
+    Collapse._jQueryInterface = function _jQueryInterface(config) {
+      return this.each(function () {
+        var $element = $__default['default'](this);
+        var data = $element.data(DATA_KEY);
+
+        var _config = _extends({}, Default, $element.data(), typeof config === 'object' && config ? config : {});
+
+        if (!data && _config.toggle && typeof config === 'string' && /show|hide/.test(config)) {
+          _config.toggle = false;
+        }
+
+        if (!data) {
+          data = new Collapse(this, _config);
+          $element.data(DATA_KEY, data);
+        }
+
+        if (typeof config === 'string') {
+          if (typeof data[config] === 'undefined') {
+            throw new TypeError("No method named \"" + config + "\"");
+          }
+
+          data[config]();
+        }
+      });
+    };
+
+    _createClass(Collapse, null, [{
+      key: "VERSION",
+      get: function get() {
+        return VERSION;
+      }
+    }, {
+      key: "Default",
+      get: function get() {
+        return Default;
+      }
+    }]);
+
+    return Collapse;
+  }();
+  /**
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
+   */
+
+
+  $__default['default'](document).on(EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
+    // preventDefault only for <a> elements (which change the URL) not inside the collapsible element
+    if (event.currentTarget.tagName === 'A') {
+      event.preventDefault();
+    }
+
+    var $trigger = $__default['default'](this);
+    var selector = Util__default['default'].getSelectorFromElement(this);
+    var selectors = [].slice.call(document.querySelectorAll(selector));
+    $__default['default'](selectors).each(function () {
+      var $target = $__default['default'](this);
+      var data = $target.data(DATA_KEY);
+      var config = data ? 'toggle' : $trigger.data();
+
+      Collapse._jQueryInterface.call($target, config);
+    });
+  });
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
+
+  $__default['default'].fn[NAME] = Collapse._jQueryInterface;
+  $__default['default'].fn[NAME].Constructor = Collapse;
+
+  $__default['default'].fn[NAME].noConflict = function () {
+    $__default['default'].fn[NAME] = JQUERY_NO_CONFLICT;
+    return Collapse._jQueryInterface;
+  };
+
+  return Collapse;
+
+})));
+//# sourceMappingURL=collapse.js.map
+
 
 /***/ }),
 
@@ -27481,1561 +28117,6 @@ if ( typeof noGlobal === "undefined" ) {
 
 return jQuery;
 } );
-
-
-/***/ }),
-
-/***/ "./node_modules/picturefill/dist/picturefill.js":
-/*!******************************************************!*\
-  !*** ./node_modules/picturefill/dist/picturefill.js ***!
-  \******************************************************/
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_RESULT__;/*! picturefill - v3.0.2 - 2016-02-12
- * https://scottjehl.github.io/picturefill/
- * Copyright (c) 2016 https://github.com/scottjehl/picturefill/blob/master/Authors.txt; Licensed MIT
- */
-/*! Gecko-Picture - v1.0
- * https://github.com/scottjehl/picturefill/tree/3.0/src/plugins/gecko-picture
- * Firefox's early picture implementation (prior to FF41) is static and does
- * not react to viewport changes. This tiny module fixes this.
- */
-(function(window) {
-	/*jshint eqnull:true */
-	var ua = navigator.userAgent;
-
-	if ( window.HTMLPictureElement && ((/ecko/).test(ua) && ua.match(/rv\:(\d+)/) && RegExp.$1 < 45) ) {
-		addEventListener("resize", (function() {
-			var timer;
-
-			var dummySrc = document.createElement("source");
-
-			var fixRespimg = function(img) {
-				var source, sizes;
-				var picture = img.parentNode;
-
-				if (picture.nodeName.toUpperCase() === "PICTURE") {
-					source = dummySrc.cloneNode();
-
-					picture.insertBefore(source, picture.firstElementChild);
-					setTimeout(function() {
-						picture.removeChild(source);
-					});
-				} else if (!img._pfLastSize || img.offsetWidth > img._pfLastSize) {
-					img._pfLastSize = img.offsetWidth;
-					sizes = img.sizes;
-					img.sizes += ",100vw";
-					setTimeout(function() {
-						img.sizes = sizes;
-					});
-				}
-			};
-
-			var findPictureImgs = function() {
-				var i;
-				var imgs = document.querySelectorAll("picture > img, img[srcset][sizes]");
-				for (i = 0; i < imgs.length; i++) {
-					fixRespimg(imgs[i]);
-				}
-			};
-			var onResize = function() {
-				clearTimeout(timer);
-				timer = setTimeout(findPictureImgs, 99);
-			};
-			var mq = window.matchMedia && matchMedia("(orientation: landscape)");
-			var init = function() {
-				onResize();
-
-				if (mq && mq.addListener) {
-					mq.addListener(onResize);
-				}
-			};
-
-			dummySrc.srcset = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
-
-			if (/^[c|i]|d$/.test(document.readyState || "")) {
-				init();
-			} else {
-				document.addEventListener("DOMContentLoaded", init);
-			}
-
-			return onResize;
-		})());
-	}
-})(window);
-
-/*! Picturefill - v3.0.2
- * http://scottjehl.github.io/picturefill
- * Copyright (c) 2015 https://github.com/scottjehl/picturefill/blob/master/Authors.txt;
- *  License: MIT
- */
-
-(function( window, document, undefined ) {
-	// Enable strict mode
-	"use strict";
-
-	// HTML shim|v it for old IE (IE9 will still need the HTML video tag workaround)
-	document.createElement( "picture" );
-
-	var warn, eminpx, alwaysCheckWDescriptor, evalId;
-	// local object for method references and testing exposure
-	var pf = {};
-	var isSupportTestReady = false;
-	var noop = function() {};
-	var image = document.createElement( "img" );
-	var getImgAttr = image.getAttribute;
-	var setImgAttr = image.setAttribute;
-	var removeImgAttr = image.removeAttribute;
-	var docElem = document.documentElement;
-	var types = {};
-	var cfg = {
-		//resource selection:
-		algorithm: ""
-	};
-	var srcAttr = "data-pfsrc";
-	var srcsetAttr = srcAttr + "set";
-	// ua sniffing is done for undetectable img loading features,
-	// to do some non crucial perf optimizations
-	var ua = navigator.userAgent;
-	var supportAbort = (/rident/).test(ua) || ((/ecko/).test(ua) && ua.match(/rv\:(\d+)/) && RegExp.$1 > 35 );
-	var curSrcProp = "currentSrc";
-	var regWDesc = /\s+\+?\d+(e\d+)?w/;
-	var regSize = /(\([^)]+\))?\s*(.+)/;
-	var setOptions = window.picturefillCFG;
-	/**
-	 * Shortcut property for https://w3c.github.io/webappsec/specs/mixedcontent/#restricts-mixed-content ( for easy overriding in tests )
-	 */
-	// baseStyle also used by getEmValue (i.e.: width: 1em is important)
-	var baseStyle = "position:absolute;left:0;visibility:hidden;display:block;padding:0;border:none;font-size:1em;width:1em;overflow:hidden;clip:rect(0px, 0px, 0px, 0px)";
-	var fsCss = "font-size:100%!important;";
-	var isVwDirty = true;
-
-	var cssCache = {};
-	var sizeLengthCache = {};
-	var DPR = window.devicePixelRatio;
-	var units = {
-		px: 1,
-		"in": 96
-	};
-	var anchor = document.createElement( "a" );
-	/**
-	 * alreadyRun flag used for setOptions. is it true setOptions will reevaluate
-	 * @type {boolean}
-	 */
-	var alreadyRun = false;
-
-	// Reusable, non-"g" Regexes
-
-	// (Don't use \s, to avoid matching non-breaking space.)
-	var regexLeadingSpaces = /^[ \t\n\r\u000c]+/,
-	    regexLeadingCommasOrSpaces = /^[, \t\n\r\u000c]+/,
-	    regexLeadingNotSpaces = /^[^ \t\n\r\u000c]+/,
-	    regexTrailingCommas = /[,]+$/,
-	    regexNonNegativeInteger = /^\d+$/,
-
-	    // ( Positive or negative or unsigned integers or decimals, without or without exponents.
-	    // Must include at least one digit.
-	    // According to spec tests any decimal point must be followed by a digit.
-	    // No leading plus sign is allowed.)
-	    // https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number
-	    regexFloatingPoint = /^-?(?:[0-9]+|[0-9]*\.[0-9]+)(?:[eE][+-]?[0-9]+)?$/;
-
-	var on = function(obj, evt, fn, capture) {
-		if ( obj.addEventListener ) {
-			obj.addEventListener(evt, fn, capture || false);
-		} else if ( obj.attachEvent ) {
-			obj.attachEvent( "on" + evt, fn);
-		}
-	};
-
-	/**
-	 * simple memoize function:
-	 */
-
-	var memoize = function(fn) {
-		var cache = {};
-		return function(input) {
-			if ( !(input in cache) ) {
-				cache[ input ] = fn(input);
-			}
-			return cache[ input ];
-		};
-	};
-
-	// UTILITY FUNCTIONS
-
-	// Manual is faster than RegEx
-	// http://jsperf.com/whitespace-character/5
-	function isSpace(c) {
-		return (c === "\u0020" || // space
-		        c === "\u0009" || // horizontal tab
-		        c === "\u000A" || // new line
-		        c === "\u000C" || // form feed
-		        c === "\u000D");  // carriage return
-	}
-
-	/**
-	 * gets a mediaquery and returns a boolean or gets a css length and returns a number
-	 * @param css mediaqueries or css length
-	 * @returns {boolean|number}
-	 *
-	 * based on: https://gist.github.com/jonathantneal/db4f77009b155f083738
-	 */
-	var evalCSS = (function() {
-
-		var regLength = /^([\d\.]+)(em|vw|px)$/;
-		var replace = function() {
-			var args = arguments, index = 0, string = args[0];
-			while (++index in args) {
-				string = string.replace(args[index], args[++index]);
-			}
-			return string;
-		};
-
-		var buildStr = memoize(function(css) {
-
-			return "return " + replace((css || "").toLowerCase(),
-				// interpret `and`
-				/\band\b/g, "&&",
-
-				// interpret `,`
-				/,/g, "||",
-
-				// interpret `min-` as >=
-				/min-([a-z-\s]+):/g, "e.$1>=",
-
-				// interpret `max-` as <=
-				/max-([a-z-\s]+):/g, "e.$1<=",
-
-				//calc value
-				/calc([^)]+)/g, "($1)",
-
-				// interpret css values
-				/(\d+[\.]*[\d]*)([a-z]+)/g, "($1 * e.$2)",
-				//make eval less evil
-				/^(?!(e.[a-z]|[0-9\.&=|><\+\-\*\(\)\/])).*/ig, ""
-			) + ";";
-		});
-
-		return function(css, length) {
-			var parsedLength;
-			if (!(css in cssCache)) {
-				cssCache[css] = false;
-				if (length && (parsedLength = css.match( regLength ))) {
-					cssCache[css] = parsedLength[ 1 ] * units[parsedLength[ 2 ]];
-				} else {
-					/*jshint evil:true */
-					try{
-						cssCache[css] = new Function("e", buildStr(css))(units);
-					} catch(e) {}
-					/*jshint evil:false */
-				}
-			}
-			return cssCache[css];
-		};
-	})();
-
-	var setResolution = function( candidate, sizesattr ) {
-		if ( candidate.w ) { // h = means height: || descriptor.type === 'h' do not handle yet...
-			candidate.cWidth = pf.calcListLength( sizesattr || "100vw" );
-			candidate.res = candidate.w / candidate.cWidth ;
-		} else {
-			candidate.res = candidate.d;
-		}
-		return candidate;
-	};
-
-	/**
-	 *
-	 * @param opt
-	 */
-	var picturefill = function( opt ) {
-
-		if (!isSupportTestReady) {return;}
-
-		var elements, i, plen;
-
-		var options = opt || {};
-
-		if ( options.elements && options.elements.nodeType === 1 ) {
-			if ( options.elements.nodeName.toUpperCase() === "IMG" ) {
-				options.elements =  [ options.elements ];
-			} else {
-				options.context = options.elements;
-				options.elements =  null;
-			}
-		}
-
-		elements = options.elements || pf.qsa( (options.context || document), ( options.reevaluate || options.reselect ) ? pf.sel : pf.selShort );
-
-		if ( (plen = elements.length) ) {
-
-			pf.setupRun( options );
-			alreadyRun = true;
-
-			// Loop through all elements
-			for ( i = 0; i < plen; i++ ) {
-				pf.fillImg(elements[ i ], options);
-			}
-
-			pf.teardownRun( options );
-		}
-	};
-
-	/**
-	 * outputs a warning for the developer
-	 * @param {message}
-	 * @type {Function}
-	 */
-	warn = ( window.console && console.warn ) ?
-		function( message ) {
-			console.warn( message );
-		} :
-		noop
-	;
-
-	if ( !(curSrcProp in image) ) {
-		curSrcProp = "src";
-	}
-
-	// Add support for standard mime types.
-	types[ "image/jpeg" ] = true;
-	types[ "image/gif" ] = true;
-	types[ "image/png" ] = true;
-
-	function detectTypeSupport( type, typeUri ) {
-		// based on Modernizr's lossless img-webp test
-		// note: asynchronous
-		var image = new window.Image();
-		image.onerror = function() {
-			types[ type ] = false;
-			picturefill();
-		};
-		image.onload = function() {
-			types[ type ] = image.width === 1;
-			picturefill();
-		};
-		image.src = typeUri;
-		return "pending";
-	}
-
-	// test svg support
-	types[ "image/svg+xml" ] = document.implementation.hasFeature( "http://www.w3.org/TR/SVG11/feature#Image", "1.1" );
-
-	/**
-	 * updates the internal vW property with the current viewport width in px
-	 */
-	function updateMetrics() {
-
-		isVwDirty = false;
-		DPR = window.devicePixelRatio;
-		cssCache = {};
-		sizeLengthCache = {};
-
-		pf.DPR = DPR || 1;
-
-		units.width = Math.max(window.innerWidth || 0, docElem.clientWidth);
-		units.height = Math.max(window.innerHeight || 0, docElem.clientHeight);
-
-		units.vw = units.width / 100;
-		units.vh = units.height / 100;
-
-		evalId = [ units.height, units.width, DPR ].join("-");
-
-		units.em = pf.getEmValue();
-		units.rem = units.em;
-	}
-
-	function chooseLowRes( lowerValue, higherValue, dprValue, isCached ) {
-		var bonusFactor, tooMuch, bonus, meanDensity;
-
-		//experimental
-		if (cfg.algorithm === "saveData" ){
-			if ( lowerValue > 2.7 ) {
-				meanDensity = dprValue + 1;
-			} else {
-				tooMuch = higherValue - dprValue;
-				bonusFactor = Math.pow(lowerValue - 0.6, 1.5);
-
-				bonus = tooMuch * bonusFactor;
-
-				if (isCached) {
-					bonus += 0.1 * bonusFactor;
-				}
-
-				meanDensity = lowerValue + bonus;
-			}
-		} else {
-			meanDensity = (dprValue > 1) ?
-				Math.sqrt(lowerValue * higherValue) :
-				lowerValue;
-		}
-
-		return meanDensity > dprValue;
-	}
-
-	function applyBestCandidate( img ) {
-		var srcSetCandidates;
-		var matchingSet = pf.getSet( img );
-		var evaluated = false;
-		if ( matchingSet !== "pending" ) {
-			evaluated = evalId;
-			if ( matchingSet ) {
-				srcSetCandidates = pf.setRes( matchingSet );
-				pf.applySetCandidate( srcSetCandidates, img );
-			}
-		}
-		img[ pf.ns ].evaled = evaluated;
-	}
-
-	function ascendingSort( a, b ) {
-		return a.res - b.res;
-	}
-
-	function setSrcToCur( img, src, set ) {
-		var candidate;
-		if ( !set && src ) {
-			set = img[ pf.ns ].sets;
-			set = set && set[set.length - 1];
-		}
-
-		candidate = getCandidateForSrc(src, set);
-
-		if ( candidate ) {
-			src = pf.makeUrl(src);
-			img[ pf.ns ].curSrc = src;
-			img[ pf.ns ].curCan = candidate;
-
-			if ( !candidate.res ) {
-				setResolution( candidate, candidate.set.sizes );
-			}
-		}
-		return candidate;
-	}
-
-	function getCandidateForSrc( src, set ) {
-		var i, candidate, candidates;
-		if ( src && set ) {
-			candidates = pf.parseSet( set );
-			src = pf.makeUrl(src);
-			for ( i = 0; i < candidates.length; i++ ) {
-				if ( src === pf.makeUrl(candidates[ i ].url) ) {
-					candidate = candidates[ i ];
-					break;
-				}
-			}
-		}
-		return candidate;
-	}
-
-	function getAllSourceElements( picture, candidates ) {
-		var i, len, source, srcset;
-
-		// SPEC mismatch intended for size and perf:
-		// actually only source elements preceding the img should be used
-		// also note: don't use qsa here, because IE8 sometimes doesn't like source as the key part in a selector
-		var sources = picture.getElementsByTagName( "source" );
-
-		for ( i = 0, len = sources.length; i < len; i++ ) {
-			source = sources[ i ];
-			source[ pf.ns ] = true;
-			srcset = source.getAttribute( "srcset" );
-
-			// if source does not have a srcset attribute, skip
-			if ( srcset ) {
-				candidates.push( {
-					srcset: srcset,
-					media: source.getAttribute( "media" ),
-					type: source.getAttribute( "type" ),
-					sizes: source.getAttribute( "sizes" )
-				} );
-			}
-		}
-	}
-
-	/**
-	 * Srcset Parser
-	 * By Alex Bell |  MIT License
-	 *
-	 * @returns Array [{url: _, d: _, w: _, h:_, set:_(????)}, ...]
-	 *
-	 * Based super duper closely on the reference algorithm at:
-	 * https://html.spec.whatwg.org/multipage/embedded-content.html#parse-a-srcset-attribute
-	 */
-
-	// 1. Let input be the value passed to this algorithm.
-	// (TO-DO : Explain what "set" argument is here. Maybe choose a more
-	// descriptive & more searchable name.  Since passing the "set" in really has
-	// nothing to do with parsing proper, I would prefer this assignment eventually
-	// go in an external fn.)
-	function parseSrcset(input, set) {
-
-		function collectCharacters(regEx) {
-			var chars,
-			    match = regEx.exec(input.substring(pos));
-			if (match) {
-				chars = match[ 0 ];
-				pos += chars.length;
-				return chars;
-			}
-		}
-
-		var inputLength = input.length,
-		    url,
-		    descriptors,
-		    currentDescriptor,
-		    state,
-		    c,
-
-		    // 2. Let position be a pointer into input, initially pointing at the start
-		    //    of the string.
-		    pos = 0,
-
-		    // 3. Let candidates be an initially empty source set.
-		    candidates = [];
-
-		/**
-		* Adds descriptor properties to a candidate, pushes to the candidates array
-		* @return undefined
-		*/
-		// (Declared outside of the while loop so that it's only created once.
-		// (This fn is defined before it is used, in order to pass JSHINT.
-		// Unfortunately this breaks the sequencing of the spec comments. :/ )
-		function parseDescriptors() {
-
-			// 9. Descriptor parser: Let error be no.
-			var pError = false,
-
-			// 10. Let width be absent.
-			// 11. Let density be absent.
-			// 12. Let future-compat-h be absent. (We're implementing it now as h)
-			    w, d, h, i,
-			    candidate = {},
-			    desc, lastChar, value, intVal, floatVal;
-
-			// 13. For each descriptor in descriptors, run the appropriate set of steps
-			// from the following list:
-			for (i = 0 ; i < descriptors.length; i++) {
-				desc = descriptors[ i ];
-
-				lastChar = desc[ desc.length - 1 ];
-				value = desc.substring(0, desc.length - 1);
-				intVal = parseInt(value, 10);
-				floatVal = parseFloat(value);
-
-				// If the descriptor consists of a valid non-negative integer followed by
-				// a U+0077 LATIN SMALL LETTER W character
-				if (regexNonNegativeInteger.test(value) && (lastChar === "w")) {
-
-					// If width and density are not both absent, then let error be yes.
-					if (w || d) {pError = true;}
-
-					// Apply the rules for parsing non-negative integers to the descriptor.
-					// If the result is zero, let error be yes.
-					// Otherwise, let width be the result.
-					if (intVal === 0) {pError = true;} else {w = intVal;}
-
-				// If the descriptor consists of a valid floating-point number followed by
-				// a U+0078 LATIN SMALL LETTER X character
-				} else if (regexFloatingPoint.test(value) && (lastChar === "x")) {
-
-					// If width, density and future-compat-h are not all absent, then let error
-					// be yes.
-					if (w || d || h) {pError = true;}
-
-					// Apply the rules for parsing floating-point number values to the descriptor.
-					// If the result is less than zero, let error be yes. Otherwise, let density
-					// be the result.
-					if (floatVal < 0) {pError = true;} else {d = floatVal;}
-
-				// If the descriptor consists of a valid non-negative integer followed by
-				// a U+0068 LATIN SMALL LETTER H character
-				} else if (regexNonNegativeInteger.test(value) && (lastChar === "h")) {
-
-					// If height and density are not both absent, then let error be yes.
-					if (h || d) {pError = true;}
-
-					// Apply the rules for parsing non-negative integers to the descriptor.
-					// If the result is zero, let error be yes. Otherwise, let future-compat-h
-					// be the result.
-					if (intVal === 0) {pError = true;} else {h = intVal;}
-
-				// Anything else, Let error be yes.
-				} else {pError = true;}
-			} // (close step 13 for loop)
-
-			// 15. If error is still no, then append a new image source to candidates whose
-			// URL is url, associated with a width width if not absent and a pixel
-			// density density if not absent. Otherwise, there is a parse error.
-			if (!pError) {
-				candidate.url = url;
-
-				if (w) { candidate.w = w;}
-				if (d) { candidate.d = d;}
-				if (h) { candidate.h = h;}
-				if (!h && !d && !w) {candidate.d = 1;}
-				if (candidate.d === 1) {set.has1x = true;}
-				candidate.set = set;
-
-				candidates.push(candidate);
-			}
-		} // (close parseDescriptors fn)
-
-		/**
-		* Tokenizes descriptor properties prior to parsing
-		* Returns undefined.
-		* (Again, this fn is defined before it is used, in order to pass JSHINT.
-		* Unfortunately this breaks the logical sequencing of the spec comments. :/ )
-		*/
-		function tokenize() {
-
-			// 8.1. Descriptor tokeniser: Skip whitespace
-			collectCharacters(regexLeadingSpaces);
-
-			// 8.2. Let current descriptor be the empty string.
-			currentDescriptor = "";
-
-			// 8.3. Let state be in descriptor.
-			state = "in descriptor";
-
-			while (true) {
-
-				// 8.4. Let c be the character at position.
-				c = input.charAt(pos);
-
-				//  Do the following depending on the value of state.
-				//  For the purpose of this step, "EOF" is a special character representing
-				//  that position is past the end of input.
-
-				// In descriptor
-				if (state === "in descriptor") {
-					// Do the following, depending on the value of c:
-
-				  // Space character
-				  // If current descriptor is not empty, append current descriptor to
-				  // descriptors and let current descriptor be the empty string.
-				  // Set state to after descriptor.
-					if (isSpace(c)) {
-						if (currentDescriptor) {
-							descriptors.push(currentDescriptor);
-							currentDescriptor = "";
-							state = "after descriptor";
-						}
-
-					// U+002C COMMA (,)
-					// Advance position to the next character in input. If current descriptor
-					// is not empty, append current descriptor to descriptors. Jump to the step
-					// labeled descriptor parser.
-					} else if (c === ",") {
-						pos += 1;
-						if (currentDescriptor) {
-							descriptors.push(currentDescriptor);
-						}
-						parseDescriptors();
-						return;
-
-					// U+0028 LEFT PARENTHESIS (()
-					// Append c to current descriptor. Set state to in parens.
-					} else if (c === "\u0028") {
-						currentDescriptor = currentDescriptor + c;
-						state = "in parens";
-
-					// EOF
-					// If current descriptor is not empty, append current descriptor to
-					// descriptors. Jump to the step labeled descriptor parser.
-					} else if (c === "") {
-						if (currentDescriptor) {
-							descriptors.push(currentDescriptor);
-						}
-						parseDescriptors();
-						return;
-
-					// Anything else
-					// Append c to current descriptor.
-					} else {
-						currentDescriptor = currentDescriptor + c;
-					}
-				// (end "in descriptor"
-
-				// In parens
-				} else if (state === "in parens") {
-
-					// U+0029 RIGHT PARENTHESIS ())
-					// Append c to current descriptor. Set state to in descriptor.
-					if (c === ")") {
-						currentDescriptor = currentDescriptor + c;
-						state = "in descriptor";
-
-					// EOF
-					// Append current descriptor to descriptors. Jump to the step labeled
-					// descriptor parser.
-					} else if (c === "") {
-						descriptors.push(currentDescriptor);
-						parseDescriptors();
-						return;
-
-					// Anything else
-					// Append c to current descriptor.
-					} else {
-						currentDescriptor = currentDescriptor + c;
-					}
-
-				// After descriptor
-				} else if (state === "after descriptor") {
-
-					// Do the following, depending on the value of c:
-					// Space character: Stay in this state.
-					if (isSpace(c)) {
-
-					// EOF: Jump to the step labeled descriptor parser.
-					} else if (c === "") {
-						parseDescriptors();
-						return;
-
-					// Anything else
-					// Set state to in descriptor. Set position to the previous character in input.
-					} else {
-						state = "in descriptor";
-						pos -= 1;
-
-					}
-				}
-
-				// Advance position to the next character in input.
-				pos += 1;
-
-			// Repeat this step.
-			} // (close while true loop)
-		}
-
-		// 4. Splitting loop: Collect a sequence of characters that are space
-		//    characters or U+002C COMMA characters. If any U+002C COMMA characters
-		//    were collected, that is a parse error.
-		while (true) {
-			collectCharacters(regexLeadingCommasOrSpaces);
-
-			// 5. If position is past the end of input, return candidates and abort these steps.
-			if (pos >= inputLength) {
-				return candidates; // (we're done, this is the sole return path)
-			}
-
-			// 6. Collect a sequence of characters that are not space characters,
-			//    and let that be url.
-			url = collectCharacters(regexLeadingNotSpaces);
-
-			// 7. Let descriptors be a new empty list.
-			descriptors = [];
-
-			// 8. If url ends with a U+002C COMMA character (,), follow these substeps:
-			//		(1). Remove all trailing U+002C COMMA characters from url. If this removed
-			//         more than one character, that is a parse error.
-			if (url.slice(-1) === ",") {
-				url = url.replace(regexTrailingCommas, "");
-				// (Jump ahead to step 9 to skip tokenization and just push the candidate).
-				parseDescriptors();
-
-			//	Otherwise, follow these substeps:
-			} else {
-				tokenize();
-			} // (close else of step 8)
-
-		// 16. Return to the step labeled splitting loop.
-		} // (Close of big while loop.)
-	}
-
-	/*
-	 * Sizes Parser
-	 *
-	 * By Alex Bell |  MIT License
-	 *
-	 * Non-strict but accurate and lightweight JS Parser for the string value <img sizes="here">
-	 *
-	 * Reference algorithm at:
-	 * https://html.spec.whatwg.org/multipage/embedded-content.html#parse-a-sizes-attribute
-	 *
-	 * Most comments are copied in directly from the spec
-	 * (except for comments in parens).
-	 *
-	 * Grammar is:
-	 * <source-size-list> = <source-size># [ , <source-size-value> ]? | <source-size-value>
-	 * <source-size> = <media-condition> <source-size-value>
-	 * <source-size-value> = <length>
-	 * http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#attr-img-sizes
-	 *
-	 * E.g. "(max-width: 30em) 100vw, (max-width: 50em) 70vw, 100vw"
-	 * or "(min-width: 30em), calc(30vw - 15px)" or just "30vw"
-	 *
-	 * Returns the first valid <css-length> with a media condition that evaluates to true,
-	 * or "100vw" if all valid media conditions evaluate to false.
-	 *
-	 */
-
-	function parseSizes(strValue) {
-
-		// (Percentage CSS lengths are not allowed in this case, to avoid confusion:
-		// https://html.spec.whatwg.org/multipage/embedded-content.html#valid-source-size-list
-		// CSS allows a single optional plus or minus sign:
-		// http://www.w3.org/TR/CSS2/syndata.html#numbers
-		// CSS is ASCII case-insensitive:
-		// http://www.w3.org/TR/CSS2/syndata.html#characters )
-		// Spec allows exponential notation for <number> type:
-		// http://dev.w3.org/csswg/css-values/#numbers
-		var regexCssLengthWithUnits = /^(?:[+-]?[0-9]+|[0-9]*\.[0-9]+)(?:[eE][+-]?[0-9]+)?(?:ch|cm|em|ex|in|mm|pc|pt|px|rem|vh|vmin|vmax|vw)$/i;
-
-		// (This is a quick and lenient test. Because of optional unlimited-depth internal
-		// grouping parens and strict spacing rules, this could get very complicated.)
-		var regexCssCalc = /^calc\((?:[0-9a-z \.\+\-\*\/\(\)]+)\)$/i;
-
-		var i;
-		var unparsedSizesList;
-		var unparsedSizesListLength;
-		var unparsedSize;
-		var lastComponentValue;
-		var size;
-
-		// UTILITY FUNCTIONS
-
-		//  (Toy CSS parser. The goals here are:
-		//  1) expansive test coverage without the weight of a full CSS parser.
-		//  2) Avoiding regex wherever convenient.
-		//  Quick tests: http://jsfiddle.net/gtntL4gr/3/
-		//  Returns an array of arrays.)
-		function parseComponentValues(str) {
-			var chrctr;
-			var component = "";
-			var componentArray = [];
-			var listArray = [];
-			var parenDepth = 0;
-			var pos = 0;
-			var inComment = false;
-
-			function pushComponent() {
-				if (component) {
-					componentArray.push(component);
-					component = "";
-				}
-			}
-
-			function pushComponentArray() {
-				if (componentArray[0]) {
-					listArray.push(componentArray);
-					componentArray = [];
-				}
-			}
-
-			// (Loop forwards from the beginning of the string.)
-			while (true) {
-				chrctr = str.charAt(pos);
-
-				if (chrctr === "") { // ( End of string reached.)
-					pushComponent();
-					pushComponentArray();
-					return listArray;
-				} else if (inComment) {
-					if ((chrctr === "*") && (str[pos + 1] === "/")) { // (At end of a comment.)
-						inComment = false;
-						pos += 2;
-						pushComponent();
-						continue;
-					} else {
-						pos += 1; // (Skip all characters inside comments.)
-						continue;
-					}
-				} else if (isSpace(chrctr)) {
-					// (If previous character in loop was also a space, or if
-					// at the beginning of the string, do not add space char to
-					// component.)
-					if ( (str.charAt(pos - 1) && isSpace( str.charAt(pos - 1) ) ) || !component ) {
-						pos += 1;
-						continue;
-					} else if (parenDepth === 0) {
-						pushComponent();
-						pos +=1;
-						continue;
-					} else {
-						// (Replace any space character with a plain space for legibility.)
-						chrctr = " ";
-					}
-				} else if (chrctr === "(") {
-					parenDepth += 1;
-				} else if (chrctr === ")") {
-					parenDepth -= 1;
-				} else if (chrctr === ",") {
-					pushComponent();
-					pushComponentArray();
-					pos += 1;
-					continue;
-				} else if ( (chrctr === "/") && (str.charAt(pos + 1) === "*") ) {
-					inComment = true;
-					pos += 2;
-					continue;
-				}
-
-				component = component + chrctr;
-				pos += 1;
-			}
-		}
-
-		function isValidNonNegativeSourceSizeValue(s) {
-			if (regexCssLengthWithUnits.test(s) && (parseFloat(s) >= 0)) {return true;}
-			if (regexCssCalc.test(s)) {return true;}
-			// ( http://www.w3.org/TR/CSS2/syndata.html#numbers says:
-			// "-0 is equivalent to 0 and is not a negative number." which means that
-			// unitless zero and unitless negative zero must be accepted as special cases.)
-			if ((s === "0") || (s === "-0") || (s === "+0")) {return true;}
-			return false;
-		}
-
-		// When asked to parse a sizes attribute from an element, parse a
-		// comma-separated list of component values from the value of the element's
-		// sizes attribute (or the empty string, if the attribute is absent), and let
-		// unparsed sizes list be the result.
-		// http://dev.w3.org/csswg/css-syntax/#parse-comma-separated-list-of-component-values
-
-		unparsedSizesList = parseComponentValues(strValue);
-		unparsedSizesListLength = unparsedSizesList.length;
-
-		// For each unparsed size in unparsed sizes list:
-		for (i = 0; i < unparsedSizesListLength; i++) {
-			unparsedSize = unparsedSizesList[i];
-
-			// 1. Remove all consecutive <whitespace-token>s from the end of unparsed size.
-			// ( parseComponentValues() already omits spaces outside of parens. )
-
-			// If unparsed size is now empty, that is a parse error; continue to the next
-			// iteration of this algorithm.
-			// ( parseComponentValues() won't push an empty array. )
-
-			// 2. If the last component value in unparsed size is a valid non-negative
-			// <source-size-value>, let size be its value and remove the component value
-			// from unparsed size. Any CSS function other than the calc() function is
-			// invalid. Otherwise, there is a parse error; continue to the next iteration
-			// of this algorithm.
-			// http://dev.w3.org/csswg/css-syntax/#parse-component-value
-			lastComponentValue = unparsedSize[unparsedSize.length - 1];
-
-			if (isValidNonNegativeSourceSizeValue(lastComponentValue)) {
-				size = lastComponentValue;
-				unparsedSize.pop();
-			} else {
-				continue;
-			}
-
-			// 3. Remove all consecutive <whitespace-token>s from the end of unparsed
-			// size. If unparsed size is now empty, return size and exit this algorithm.
-			// If this was not the last item in unparsed sizes list, that is a parse error.
-			if (unparsedSize.length === 0) {
-				return size;
-			}
-
-			// 4. Parse the remaining component values in unparsed size as a
-			// <media-condition>. If it does not parse correctly, or it does parse
-			// correctly but the <media-condition> evaluates to false, continue to the
-			// next iteration of this algorithm.
-			// (Parsing all possible compound media conditions in JS is heavy, complicated,
-			// and the payoff is unclear. Is there ever an situation where the
-			// media condition parses incorrectly but still somehow evaluates to true?
-			// Can we just rely on the browser/polyfill to do it?)
-			unparsedSize = unparsedSize.join(" ");
-			if (!(pf.matchesMedia( unparsedSize ) ) ) {
-				continue;
-			}
-
-			// 5. Return size and exit this algorithm.
-			return size;
-		}
-
-		// If the above algorithm exhausts unparsed sizes list without returning a
-		// size value, return 100vw.
-		return "100vw";
-	}
-
-	// namespace
-	pf.ns = ("pf" + new Date().getTime()).substr(0, 9);
-
-	// srcset support test
-	pf.supSrcset = "srcset" in image;
-	pf.supSizes = "sizes" in image;
-	pf.supPicture = !!window.HTMLPictureElement;
-
-	// UC browser does claim to support srcset and picture, but not sizes,
-	// this extended test reveals the browser does support nothing
-	if (pf.supSrcset && pf.supPicture && !pf.supSizes) {
-		(function(image2) {
-			image.srcset = "data:,a";
-			image2.src = "data:,a";
-			pf.supSrcset = image.complete === image2.complete;
-			pf.supPicture = pf.supSrcset && pf.supPicture;
-		})(document.createElement("img"));
-	}
-
-	// Safari9 has basic support for sizes, but does't expose the `sizes` idl attribute
-	if (pf.supSrcset && !pf.supSizes) {
-
-		(function() {
-			var width2 = "data:image/gif;base64,R0lGODlhAgABAPAAAP///wAAACH5BAAAAAAALAAAAAACAAEAAAICBAoAOw==";
-			var width1 = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
-			var img = document.createElement("img");
-			var test = function() {
-				var width = img.width;
-
-				if (width === 2) {
-					pf.supSizes = true;
-				}
-
-				alwaysCheckWDescriptor = pf.supSrcset && !pf.supSizes;
-
-				isSupportTestReady = true;
-				// force async
-				setTimeout(picturefill);
-			};
-
-			img.onload = test;
-			img.onerror = test;
-			img.setAttribute("sizes", "9px");
-
-			img.srcset = width1 + " 1w," + width2 + " 9w";
-			img.src = width1;
-		})();
-
-	} else {
-		isSupportTestReady = true;
-	}
-
-	// using pf.qsa instead of dom traversing does scale much better,
-	// especially on sites mixing responsive and non-responsive images
-	pf.selShort = "picture>img,img[srcset]";
-	pf.sel = pf.selShort;
-	pf.cfg = cfg;
-
-	/**
-	 * Shortcut property for `devicePixelRatio` ( for easy overriding in tests )
-	 */
-	pf.DPR = (DPR  || 1 );
-	pf.u = units;
-
-	// container of supported mime types that one might need to qualify before using
-	pf.types =  types;
-
-	pf.setSize = noop;
-
-	/**
-	 * Gets a string and returns the absolute URL
-	 * @param src
-	 * @returns {String} absolute URL
-	 */
-
-	pf.makeUrl = memoize(function(src) {
-		anchor.href = src;
-		return anchor.href;
-	});
-
-	/**
-	 * Gets a DOM element or document and a selctor and returns the found matches
-	 * Can be extended with jQuery/Sizzle for IE7 support
-	 * @param context
-	 * @param sel
-	 * @returns {NodeList|Array}
-	 */
-	pf.qsa = function(context, sel) {
-		return ( "querySelector" in context ) ? context.querySelectorAll(sel) : [];
-	};
-
-	/**
-	 * Shortcut method for matchMedia ( for easy overriding in tests )
-	 * wether native or pf.mMQ is used will be decided lazy on first call
-	 * @returns {boolean}
-	 */
-	pf.matchesMedia = function() {
-		if ( window.matchMedia && (matchMedia( "(min-width: 0.1em)" ) || {}).matches ) {
-			pf.matchesMedia = function( media ) {
-				return !media || ( matchMedia( media ).matches );
-			};
-		} else {
-			pf.matchesMedia = pf.mMQ;
-		}
-
-		return pf.matchesMedia.apply( this, arguments );
-	};
-
-	/**
-	 * A simplified matchMedia implementation for IE8 and IE9
-	 * handles only min-width/max-width with px or em values
-	 * @param media
-	 * @returns {boolean}
-	 */
-	pf.mMQ = function( media ) {
-		return media ? evalCSS(media) : true;
-	};
-
-	/**
-	 * Returns the calculated length in css pixel from the given sourceSizeValue
-	 * http://dev.w3.org/csswg/css-values-3/#length-value
-	 * intended Spec mismatches:
-	 * * Does not check for invalid use of CSS functions
-	 * * Does handle a computed length of 0 the same as a negative and therefore invalid value
-	 * @param sourceSizeValue
-	 * @returns {Number}
-	 */
-	pf.calcLength = function( sourceSizeValue ) {
-
-		var value = evalCSS(sourceSizeValue, true) || false;
-		if (value < 0) {
-			value = false;
-		}
-
-		return value;
-	};
-
-	/**
-	 * Takes a type string and checks if its supported
-	 */
-
-	pf.supportsType = function( type ) {
-		return ( type ) ? types[ type ] : true;
-	};
-
-	/**
-	 * Parses a sourceSize into mediaCondition (media) and sourceSizeValue (length)
-	 * @param sourceSizeStr
-	 * @returns {*}
-	 */
-	pf.parseSize = memoize(function( sourceSizeStr ) {
-		var match = ( sourceSizeStr || "" ).match(regSize);
-		return {
-			media: match && match[1],
-			length: match && match[2]
-		};
-	});
-
-	pf.parseSet = function( set ) {
-		if ( !set.cands ) {
-			set.cands = parseSrcset(set.srcset, set);
-		}
-		return set.cands;
-	};
-
-	/**
-	 * returns 1em in css px for html/body default size
-	 * function taken from respondjs
-	 * @returns {*|number}
-	 */
-	pf.getEmValue = function() {
-		var body;
-		if ( !eminpx && (body = document.body) ) {
-			var div = document.createElement( "div" ),
-				originalHTMLCSS = docElem.style.cssText,
-				originalBodyCSS = body.style.cssText;
-
-			div.style.cssText = baseStyle;
-
-			// 1em in a media query is the value of the default font size of the browser
-			// reset docElem and body to ensure the correct value is returned
-			docElem.style.cssText = fsCss;
-			body.style.cssText = fsCss;
-
-			body.appendChild( div );
-			eminpx = div.offsetWidth;
-			body.removeChild( div );
-
-			//also update eminpx before returning
-			eminpx = parseFloat( eminpx, 10 );
-
-			// restore the original values
-			docElem.style.cssText = originalHTMLCSS;
-			body.style.cssText = originalBodyCSS;
-
-		}
-		return eminpx || 16;
-	};
-
-	/**
-	 * Takes a string of sizes and returns the width in pixels as a number
-	 */
-	pf.calcListLength = function( sourceSizeListStr ) {
-		// Split up source size list, ie ( max-width: 30em ) 100%, ( max-width: 50em ) 50%, 33%
-		//
-		//                           or (min-width:30em) calc(30% - 15px)
-		if ( !(sourceSizeListStr in sizeLengthCache) || cfg.uT ) {
-			var winningLength = pf.calcLength( parseSizes( sourceSizeListStr ) );
-
-			sizeLengthCache[ sourceSizeListStr ] = !winningLength ? units.width : winningLength;
-		}
-
-		return sizeLengthCache[ sourceSizeListStr ];
-	};
-
-	/**
-	 * Takes a candidate object with a srcset property in the form of url/
-	 * ex. "images/pic-medium.png 1x, images/pic-medium-2x.png 2x" or
-	 *     "images/pic-medium.png 400w, images/pic-medium-2x.png 800w" or
-	 *     "images/pic-small.png"
-	 * Get an array of image candidates in the form of
-	 *      {url: "/foo/bar.png", resolution: 1}
-	 * where resolution is http://dev.w3.org/csswg/css-values-3/#resolution-value
-	 * If sizes is specified, res is calculated
-	 */
-	pf.setRes = function( set ) {
-		var candidates;
-		if ( set ) {
-
-			candidates = pf.parseSet( set );
-
-			for ( var i = 0, len = candidates.length; i < len; i++ ) {
-				setResolution( candidates[ i ], set.sizes );
-			}
-		}
-		return candidates;
-	};
-
-	pf.setRes.res = setResolution;
-
-	pf.applySetCandidate = function( candidates, img ) {
-		if ( !candidates.length ) {return;}
-		var candidate,
-			i,
-			j,
-			length,
-			bestCandidate,
-			curSrc,
-			curCan,
-			candidateSrc,
-			abortCurSrc;
-
-		var imageData = img[ pf.ns ];
-		var dpr = pf.DPR;
-
-		curSrc = imageData.curSrc || img[curSrcProp];
-
-		curCan = imageData.curCan || setSrcToCur(img, curSrc, candidates[0].set);
-
-		// if we have a current source, we might either become lazy or give this source some advantage
-		if ( curCan && curCan.set === candidates[ 0 ].set ) {
-
-			// if browser can abort image request and the image has a higher pixel density than needed
-			// and this image isn't downloaded yet, we skip next part and try to save bandwidth
-			abortCurSrc = (supportAbort && !img.complete && curCan.res - 0.1 > dpr);
-
-			if ( !abortCurSrc ) {
-				curCan.cached = true;
-
-				// if current candidate is "best", "better" or "okay",
-				// set it to bestCandidate
-				if ( curCan.res >= dpr ) {
-					bestCandidate = curCan;
-				}
-			}
-		}
-
-		if ( !bestCandidate ) {
-
-			candidates.sort( ascendingSort );
-
-			length = candidates.length;
-			bestCandidate = candidates[ length - 1 ];
-
-			for ( i = 0; i < length; i++ ) {
-				candidate = candidates[ i ];
-				if ( candidate.res >= dpr ) {
-					j = i - 1;
-
-					// we have found the perfect candidate,
-					// but let's improve this a little bit with some assumptions ;-)
-					if (candidates[ j ] &&
-						(abortCurSrc || curSrc !== pf.makeUrl( candidate.url )) &&
-						chooseLowRes(candidates[ j ].res, candidate.res, dpr, candidates[ j ].cached)) {
-
-						bestCandidate = candidates[ j ];
-
-					} else {
-						bestCandidate = candidate;
-					}
-					break;
-				}
-			}
-		}
-
-		if ( bestCandidate ) {
-
-			candidateSrc = pf.makeUrl( bestCandidate.url );
-
-			imageData.curSrc = candidateSrc;
-			imageData.curCan = bestCandidate;
-
-			if ( candidateSrc !== curSrc ) {
-				pf.setSrc( img, bestCandidate );
-			}
-			pf.setSize( img );
-		}
-	};
-
-	pf.setSrc = function( img, bestCandidate ) {
-		var origWidth;
-		img.src = bestCandidate.url;
-
-		// although this is a specific Safari issue, we don't want to take too much different code paths
-		if ( bestCandidate.set.type === "image/svg+xml" ) {
-			origWidth = img.style.width;
-			img.style.width = (img.offsetWidth + 1) + "px";
-
-			// next line only should trigger a repaint
-			// if... is only done to trick dead code removal
-			if ( img.offsetWidth + 1 ) {
-				img.style.width = origWidth;
-			}
-		}
-	};
-
-	pf.getSet = function( img ) {
-		var i, set, supportsType;
-		var match = false;
-		var sets = img [ pf.ns ].sets;
-
-		for ( i = 0; i < sets.length && !match; i++ ) {
-			set = sets[i];
-
-			if ( !set.srcset || !pf.matchesMedia( set.media ) || !(supportsType = pf.supportsType( set.type )) ) {
-				continue;
-			}
-
-			if ( supportsType === "pending" ) {
-				set = supportsType;
-			}
-
-			match = set;
-			break;
-		}
-
-		return match;
-	};
-
-	pf.parseSets = function( element, parent, options ) {
-		var srcsetAttribute, imageSet, isWDescripor, srcsetParsed;
-
-		var hasPicture = parent && parent.nodeName.toUpperCase() === "PICTURE";
-		var imageData = element[ pf.ns ];
-
-		if ( imageData.src === undefined || options.src ) {
-			imageData.src = getImgAttr.call( element, "src" );
-			if ( imageData.src ) {
-				setImgAttr.call( element, srcAttr, imageData.src );
-			} else {
-				removeImgAttr.call( element, srcAttr );
-			}
-		}
-
-		if ( imageData.srcset === undefined || options.srcset || !pf.supSrcset || element.srcset ) {
-			srcsetAttribute = getImgAttr.call( element, "srcset" );
-			imageData.srcset = srcsetAttribute;
-			srcsetParsed = true;
-		}
-
-		imageData.sets = [];
-
-		if ( hasPicture ) {
-			imageData.pic = true;
-			getAllSourceElements( parent, imageData.sets );
-		}
-
-		if ( imageData.srcset ) {
-			imageSet = {
-				srcset: imageData.srcset,
-				sizes: getImgAttr.call( element, "sizes" )
-			};
-
-			imageData.sets.push( imageSet );
-
-			isWDescripor = (alwaysCheckWDescriptor || imageData.src) && regWDesc.test(imageData.srcset || "");
-
-			// add normal src as candidate, if source has no w descriptor
-			if ( !isWDescripor && imageData.src && !getCandidateForSrc(imageData.src, imageSet) && !imageSet.has1x ) {
-				imageSet.srcset += ", " + imageData.src;
-				imageSet.cands.push({
-					url: imageData.src,
-					d: 1,
-					set: imageSet
-				});
-			}
-
-		} else if ( imageData.src ) {
-			imageData.sets.push( {
-				srcset: imageData.src,
-				sizes: null
-			} );
-		}
-
-		imageData.curCan = null;
-		imageData.curSrc = undefined;
-
-		// if img has picture or the srcset was removed or has a srcset and does not support srcset at all
-		// or has a w descriptor (and does not support sizes) set support to false to evaluate
-		imageData.supported = !( hasPicture || ( imageSet && !pf.supSrcset ) || (isWDescripor && !pf.supSizes) );
-
-		if ( srcsetParsed && pf.supSrcset && !imageData.supported ) {
-			if ( srcsetAttribute ) {
-				setImgAttr.call( element, srcsetAttr, srcsetAttribute );
-				element.srcset = "";
-			} else {
-				removeImgAttr.call( element, srcsetAttr );
-			}
-		}
-
-		if (imageData.supported && !imageData.srcset && ((!imageData.src && element.src) ||  element.src !== pf.makeUrl(imageData.src))) {
-			if (imageData.src === null) {
-				element.removeAttribute("src");
-			} else {
-				element.src = imageData.src;
-			}
-		}
-
-		imageData.parsed = true;
-	};
-
-	pf.fillImg = function(element, options) {
-		var imageData;
-		var extreme = options.reselect || options.reevaluate;
-
-		// expando for caching data on the img
-		if ( !element[ pf.ns ] ) {
-			element[ pf.ns ] = {};
-		}
-
-		imageData = element[ pf.ns ];
-
-		// if the element has already been evaluated, skip it
-		// unless `options.reevaluate` is set to true ( this, for example,
-		// is set to true when running `picturefill` on `resize` ).
-		if ( !extreme && imageData.evaled === evalId ) {
-			return;
-		}
-
-		if ( !imageData.parsed || options.reevaluate ) {
-			pf.parseSets( element, element.parentNode, options );
-		}
-
-		if ( !imageData.supported ) {
-			applyBestCandidate( element );
-		} else {
-			imageData.evaled = evalId;
-		}
-	};
-
-	pf.setupRun = function() {
-		if ( !alreadyRun || isVwDirty || (DPR !== window.devicePixelRatio) ) {
-			updateMetrics();
-		}
-	};
-
-	// If picture is supported, well, that's awesome.
-	if ( pf.supPicture ) {
-		picturefill = noop;
-		pf.fillImg = noop;
-	} else {
-
-		 // Set up picture polyfill by polling the document
-		(function() {
-			var isDomReady;
-			var regReady = window.attachEvent ? /d$|^c/ : /d$|^c|^i/;
-
-			var run = function() {
-				var readyState = document.readyState || "";
-
-				timerId = setTimeout(run, readyState === "loading" ? 200 :  999);
-				if ( document.body ) {
-					pf.fillImgs();
-					isDomReady = isDomReady || regReady.test(readyState);
-					if ( isDomReady ) {
-						clearTimeout( timerId );
-					}
-
-				}
-			};
-
-			var timerId = setTimeout(run, document.body ? 9 : 99);
-
-			// Also attach picturefill on resize and readystatechange
-			// http://modernjavascript.blogspot.com/2013/08/building-better-debounce.html
-			var debounce = function(func, wait) {
-				var timeout, timestamp;
-				var later = function() {
-					var last = (new Date()) - timestamp;
-
-					if (last < wait) {
-						timeout = setTimeout(later, wait - last);
-					} else {
-						timeout = null;
-						func();
-					}
-				};
-
-				return function() {
-					timestamp = new Date();
-
-					if (!timeout) {
-						timeout = setTimeout(later, wait);
-					}
-				};
-			};
-			var lastClientWidth = docElem.clientHeight;
-			var onResize = function() {
-				isVwDirty = Math.max(window.innerWidth || 0, docElem.clientWidth) !== units.width || docElem.clientHeight !== lastClientWidth;
-				lastClientWidth = docElem.clientHeight;
-				if ( isVwDirty ) {
-					pf.fillImgs();
-				}
-			};
-
-			on( window, "resize", debounce(onResize, 99 ) );
-			on( document, "readystatechange", run );
-		})();
-	}
-
-	pf.picturefill = picturefill;
-	//use this internally for easy monkey patching/performance testing
-	pf.fillImgs = picturefill;
-	pf.teardownRun = noop;
-
-	/* expose methods for testing */
-	picturefill._ = pf;
-
-	window.picturefillCFG = {
-		pf: pf,
-		push: function(args) {
-			var name = args.shift();
-			if (typeof pf[name] === "function") {
-				pf[name].apply(pf, args);
-			} else {
-				cfg[name] = args[0];
-				if (alreadyRun) {
-					pf.fillImgs( { reselect: true } );
-				}
-			}
-		}
-	};
-
-	while (setOptions && setOptions.length) {
-		window.picturefillCFG.push(setOptions.shift());
-	}
-
-	/* expose picturefill */
-	window.picturefill = picturefill;
-
-	/* expose picturefill */
-	if (  true && typeof module.exports === "object" ) {
-		// CommonJS, just export
-		module.exports = picturefill;
-	} else if ( true ) {
-		// AMD support
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() { return picturefill; }).call(exports, __webpack_require__, exports, module),
-		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}
-
-	// IE8 evals this sync, so it must be the last thing we do
-	if ( !pf.supPicture ) {
-		types[ "image/webp" ] = detectTypeSupport("image/webp", "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==" );
-	}
-
-} )( window, document );
 
 
 /***/ }),

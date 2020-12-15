@@ -71,7 +71,6 @@
 .embed-responsive {
   background-color: $black;
   .embed-responsive-item, iframe, embed, object, video {
-    @include center-center();
-    // height: auto;
+    @include center-center;
   }
 }

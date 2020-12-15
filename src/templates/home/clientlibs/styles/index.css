@@ -12,7 +12,8 @@ body {
 
 .max-wrap {
   max-width: 80rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 100%; }
 
 .top-0 {
   top: 0 !important; }
@@ -60,10 +61,25 @@ main {
       padding-top: 96px; } }
 
 .bg-img-wrap {
-  display: flex;
   height: 100%;
   overflow: hidden;
-  width: 100%; }
+  width: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+  .bg-img-wrap .bg-img-wrap-src {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: auto;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .bg-img-wrap.is-portrait .bg-img-wrap-src {
+    width: auto;
+    height: 100%; }
 
 .section-wrapper.tall-as-device .swiper-container {
   height: 100%; }
@@ -141,7 +157,7 @@ h4, .h4 {
 body {
   font-weight: 400; }
 
-h1, .h1, h2, .h2, h3, .h3 {
+h1, .h1, h2, .h2, h3, .h3, .lead {
   font-weight: 300; }
 
 h4, .h4, h5, .h5, h6, .h6 {

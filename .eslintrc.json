@@ -12,6 +12,7 @@
   },
   "extends": "eslint:recommended",
   "globals": {
+    "lazysizes": true,
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   }
