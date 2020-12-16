@@ -1,3 +1,6 @@
+.embed-responsive {
+  background-color: $black;
+}
 [data-theme="dark"] {
   a {
     color: $link-color;
@@ -11,7 +14,7 @@
   }
 
   hr {
-    border-top: 1px solid rgba($white, 0.1);
+    border-top: 1px solid rgba($white, 0.25);
   }
 
   .btn {

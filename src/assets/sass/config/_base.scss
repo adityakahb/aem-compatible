@@ -5,8 +5,8 @@ html {
   font-size: 16px;
 }
 body {
-  background-color: $gray-800;
-  color: $gray-100;
+  background-color: $black;
+  color: $white;
   &.offcanvas-open {
     overflow: hidden;
   }
@@ -31,9 +31,6 @@ body {
 }
 .word-wrap {
   @include word-wrap();
-}
-.main-wrapper {
-  box-shadow: rem(0px 4px 8px 0px) rgba($black, 0.75);
 }
 [data-theme="light"] {
   background-color: $gray-100;
@@ -61,8 +58,6 @@ main {
   @include center-center;
   
   .bg-img-wrap-src {
-    position: absolute;
-    display: block;
     width: 100%;
     height: auto;
     @include center-center;
