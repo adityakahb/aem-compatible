@@ -9874,8 +9874,6 @@ a.text-dark:hover, a.text-dark:focus {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-left: 1rem;
-      padding-right: 1rem;
       position: relative;
       width: 100%; }
 
@@ -9887,11 +9885,9 @@ a.text-dark:hover, a.text-dark:focus {
     .section-wrapper.half-n-half .half-on-left, .section-wrapper.half-n-half .half-on-right {
       width: 50%; }
     .section-wrapper.half-n-half .half-on-left {
-      align-items: flex-end;
-      padding-left: 1rem; }
+      align-items: flex-end; }
     .section-wrapper.half-n-half .half-on-right {
-      align-items: flex-start;
-      padding-right: 1rem; }
+      align-items: flex-start; }
     .section-wrapper.half-n-half .half-content {
       max-width: 608px;
       width: 100%; } }
