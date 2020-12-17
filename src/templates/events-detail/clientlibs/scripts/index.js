@@ -13422,14 +13422,14 @@ module.exports = path;
 !function() {
 "use strict";
 
+// EXTERNAL MODULE: ./node_modules/core-js/stable/index.js
+var stable = __webpack_require__(8594);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/classCallCheck.js
 var classCallCheck = __webpack_require__(4575);
 var classCallCheck_default = /*#__PURE__*/__webpack_require__.n(classCallCheck);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/createClass.js
 var createClass = __webpack_require__(3913);
 var createClass_default = /*#__PURE__*/__webpack_require__.n(createClass);
-// EXTERNAL MODULE: ./node_modules/core-js/stable/index.js
-var stable = __webpack_require__(8594);
 ;// CONCATENATED MODULE: ./node_modules/ssr-window/ssr-window.esm.js
 /**
  * SSR Window 3.0.0
@@ -19933,41 +19933,12 @@ var Pagination = {
     }
   }
 });
-;// CONCATENATED MODULE: ./src/components/hero-slider/_index.es.js
-
-
-
-
-var HeroSlider = /*#__PURE__*/function () {
-  function HeroSlider() {
-    classCallCheck_default()(this, HeroSlider);
-
-    core_class.use([navigation, pagination]);
-  }
-
-  createClass_default()(HeroSlider, [{
-    key: "__init",
-    value: function __init() {
-      new core_class('.hero-slider .swiper-container', {
-        loop: false,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        }
-      });
-    }
-  }]);
-
-  return HeroSlider;
-}();
-
-
 ;// CONCATENATED MODULE: ./src/components/grid-carousel/_index.es.js
 
 
 
 
-var _index_es_HeroSlider = /*#__PURE__*/function () {
+var HeroSlider = /*#__PURE__*/function () {
   function HeroSlider() {
     classCallCheck_default()(this, HeroSlider);
 
@@ -20003,37 +19974,13 @@ var _index_es_HeroSlider = /*#__PURE__*/function () {
 }();
 
 
-;// CONCATENATED MODULE: ./src/templates/home/clientlibs/scripts/index.es.js
+;// CONCATENATED MODULE: ./src/templates/events-detail/clientlibs/scripts/index.es.js
 
-
-
-
-
-
-var Home = /*#__PURE__*/function () {
-  function Home() {
-    classCallCheck_default()(this, Home);
-  }
-
-  createClass_default()(Home, [{
-    key: "__init",
-    value: function __init() {
-      var heroSlider = new HeroSlider();
-      var gridCarousel = new _index_es_HeroSlider();
-
-      heroSlider.__init();
-
-      gridCarousel.__init();
-    }
-  }]);
-
-  return Home;
-}();
 
 document.addEventListener('DOMContentLoaded', function () {
-  var home = new Home();
+  var gridCarousel = new HeroSlider();
 
-  home.__init();
+  gridCarousel.__init();
 });
 }();
 /******/ })()

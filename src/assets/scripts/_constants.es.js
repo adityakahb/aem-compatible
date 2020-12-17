@@ -1,3 +1,6 @@
+export const _HeaderHeightMobile = '64';
+export const _HeaderHeightDesktop = '96';
+export const _HeaderBreakpoint = '768';
 export const _LandscapeCSSClass = 'is-landscape';
 export const _PortraitCSSClass = 'is-portrait';
 export const _GetElemDimensions = function (elem) {

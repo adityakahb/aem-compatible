@@ -36,7 +36,9 @@ class GlobalScripts {
   }
   __initHeader() {
     const siteheader = new SiteHeader();
+    const vendors = new Vendors();
     siteheader.__init();
+    vendors.__init();
   }
   __init() {
     bodyElem = document.querySelector('body');
@@ -44,9 +46,7 @@ class GlobalScripts {
     this.reportWindowOrientation();
     window.addEventListener('resize', this.reportWindowOrientation, false);
 
-    const vendors = new Vendors();
     const sitefooter = new SiteFooter();
-    vendors.__init();
     sitefooter.__init();
   }
 }
