@@ -11071,10 +11071,10 @@ a.text-black:hover, a.text-black:focus {
     .siteheader .header-nav #siteAccountButton {
       background-color: transparent;
       border: 0;
-      height: 44px;
+      height: 40px;
       margin: 0;
       padding: 0;
-      width: 44px;
+      width: 40px;
       font-size: 1.5rem; }
     .siteheader .header-nav button {
       transition: all 0.2s ease-in-out; }
@@ -11088,8 +11088,8 @@ a.text-black:hover, a.text-black:focus {
       color: #fff;
       text-decoration: none;
       border-radius: 100%;
-      height: 44px;
-      width: 44px;
+      height: 56px;
+      width: 56px;
       display: flex;
       align-items: center;
       justify-content: center; }
@@ -11128,8 +11128,6 @@ a.text-black:hover, a.text-black:focus {
     top: 96px; }
   .siteheader .header-nav {
     height: 96px; }
-    .siteheader .header-nav .col > button {
-      font-size: 2rem; }
     .siteheader .header-nav .site-logo a {
       height: 56px;
       width: 56px; } }

@@ -140,6 +140,32 @@ main {
     #sticky_filters {
       height: 48px; } }
 
+.avatar-outer {
+  overflow: hidden;
+  position: relative; }
+  .avatar-outer::after {
+    content: '';
+    display: block;
+    height: 0;
+    padding-bottom: 100%; }
+  .avatar-outer .avatar-inner {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%; }
+  .avatar-outer, .avatar-outer .avatar-inner {
+    border-radius: 100%; }
+  .avatar-outer svg {
+    fill: #fff;
+    font-weight: 300;
+    height: 100%;
+    width: 100%; }
+
 body {
   font-size: 14px; }
   @media (min-width: 368px) {

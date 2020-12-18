@@ -128,10 +128,10 @@
     #siteAccountButton {
       background-color: transparent;
       border: 0;
-      height: 44px;
+      height: 40px;
       margin: 0;
       padding: 0;
-      width: 44px;
+      width: 40px;
       font-size: rem(24px);
     }
 
@@ -142,6 +142,13 @@
         color: $primary;
       }
 
+      // .avatar-outer {
+      //   height: 32px;
+      //   width: 32px;
+      //   small {
+      //     font-size: 60%;
+      //   }
+      // }
     }
 
     .site-logo {
@@ -150,8 +157,8 @@
         color: $white;
         text-decoration: none;
         border-radius: 100%;
-        height: 44px;
-        width: 44px;
+        height: 56px;
+        width: 56px;
         display: flex;
         align-items: center;
         justify-content: center;
