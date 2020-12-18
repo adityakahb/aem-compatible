@@ -2,6 +2,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const glob = require('glob');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const removeFilePart = dirname => path.parse(dirname).dir;
 const RemovePlugin = require('remove-files-webpack-plugin');
 const webpack = require('webpack');
@@ -56,6 +57,7 @@ module.exports = (env, argv) => {
       ]
     },
     plugins: [
+      new ProgressBarPlugin(),
       new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery',
