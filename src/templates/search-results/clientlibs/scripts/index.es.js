@@ -14,14 +14,12 @@ class SearchResults {
         if (stickySearchFilters) {
           stickySearchFilters.cleanup();
         }
-        stickySearchFilters = stickybits('#sticky_filters', {stickyBitStickyOffset: parseInt(_HeaderHeightMobile)});
-        console.log('======stickySearchFilters 1', stickySearchFilters);
+        stickySearchFilters = stickybits('#sticky_filters', {stickyBitStickyOffset: parseInt(_HeaderHeightMobile), useStickyClasses: true});
       } else {
         if (stickySearchFilters) {
           stickySearchFilters.cleanup();
         }
-        stickySearchFilters = stickybits('#sticky_filters', {stickyBitStickyOffset: parseInt(_HeaderHeightDesktop)});
-        console.log('======stickySearchFilters 2', stickySearchFilters);
+        stickySearchFilters = stickybits('#sticky_filters', {stickyBitStickyOffset: parseInt(_HeaderHeightDesktop), useStickyClasses: true});
       }
     }
   }

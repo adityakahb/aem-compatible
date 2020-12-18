@@ -70,6 +70,14 @@ main {
     padding-top: $headerDesktopHeight;
   }
 }
+.bg-img-wrap-p {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 .bg-img-wrap {
   height: 100%;
   overflow: hidden;
@@ -115,5 +123,25 @@ main {
   margin-top: -22px;
   &::after {
     display: none;
+  }
+}
+.sticky-nav {
+  z-index: 1020;
+  &.js-is-sticky {
+    top: $headerMobileHeight;
+  }
+  &.js-is-stuck {
+    top: auto;
+    bottom: 0;
+  }
+  @media (min-width: $md) {
+    top: $headerDesktopHeight;
+  }
+}
+#sticky_filters {
+  height: 86px;
+  padding: 8px 0;
+  @media (min-width: $md) {
+    height: 48px;
   }
 }
