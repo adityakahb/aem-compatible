@@ -15,7 +15,7 @@ $theme-colors: (
   "black":      $black
 );
 
-$font-family-sans-serif: 'Prompt', sans-serif;;
+$font-family-sans-serif: 'Barlow', sans-serif;;
 
 $grid-breakpoints: (
   xs: em(0),
@@ -56,6 +56,9 @@ $spacers: (
 );
 
 $breadcrumb-divider: '\279C';
+$border-radius: .5rem;
+$border-radius-sm: .5rem;
+$border-radius-lg: .5rem;
 
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
