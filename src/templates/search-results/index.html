@@ -1,0 +1,53 @@
+<!--#include virtual="head-assets.html" -->
+
+<body>
+    <a class="skip-to-main" href="#maincontent">Skip to main content</a>
+    <div class="main-wrapper">
+        <!--#include virtual="./../../components/siteheader/_index-signedin.html" -->
+        <main id="maincontent">
+            <!--#include virtual="./../../section-wrappers/examples-one-n-only/_section-wrapper-search-count.html" -->
+            <section class="search-results-wrap">
+                <div id="sticky_filters" class="sticky-nav w-100 text-center" data-theme="dark">
+                    <div class="max-wrap">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-xl-3 text-left mb-2 mb-md-0">
+                                    <div class="dropdown d-block">
+                                        <button class="btn btn-outline-light btn-sm btn-block dropdown-toggle" type="button" id="filterResultType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <strong>Result Type:</strong> All (183)
+                                        </button>
+                                        <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">All (183)</a>
+                                            <a class="dropdown-item" href="#">PDF Files (45)</a>
+                                            <a class="dropdown-item" href="#">Links (138)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-3 text-left">
+                                    <div class="dropdown d-block">
+                                        <button class="btn btn-outline-light btn-sm btn-block dropdown-toggle" type="button" id="filterLastModified" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <strong>Last Modified:</strong> Never (183)
+                                        </button>
+                                        <div class="dropdown-menu w-100" aria-labelledby="filterLastModified">
+                                            <a class="dropdown-item" href="#">Never (183)</a>
+                                            <a class="dropdown-item" href="#">This month (2)</a>
+                                            <a class="dropdown-item" href="#">Last 3 months (11)</a>
+                                            <a class="dropdown-item" href="#">This year (133)</a>
+                                            <a class="dropdown-item" href="#">Older (37)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="sticky_filters_buffer"></div>
+                <!--#include virtual="./../../section-wrappers/examples-one-n-only/_section-wrapper-search-results.html" -->
+            </section>
+            <!--#include virtual="./../../section-wrappers/examples-one-n-only/_section-wrapper-home-grid-carousel.html" -->
+        </main>
+        <!--#include virtual="./../../components/sitefooter/_index.html" -->
+    </div>
+    <!--#include virtual="footer-assets.html" -->
+</body>
+</html>

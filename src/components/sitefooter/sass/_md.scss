@@ -1,0 +1,26 @@
+.sitefooter {
+  .footer-title {
+    pointer-events: none;
+    i {
+      &.collapsed {
+        display: none;
+      }
+      &.expanded {
+        display: none;
+      }
+    }
+    &[aria-expanded="true"] {
+      i {
+        &.collapsed {
+          display: none;
+        }
+        &.expanded {
+          display: none;
+        } 
+      }
+    }
+  }
+  .collapse:not(.show) {
+    display: block;
+  }
+}

@@ -1,0 +1,14 @@
+@media all and (-ms-high-contrast:none) {
+  *::-ms-backdrop, #sticky_filters.js-is-sticky + #sticky_filters_buffer {
+    height: 48px;
+  }
+  *::-ms-backdrop, #sticky_filters.js-is-stuck + #sticky_filters_buffer {
+    height: 48px;
+  }
+  *::-ms-backdrop, #sticky_events.js-is-sticky + #sticky_filters_buffer {
+    height: 48px;
+  }
+  *::-ms-backdrop, #sticky_events.js-is-stuck + #sticky_filters_buffer {
+    height: 48px;
+  }
+}

@@ -1,0 +1,28 @@
+.__amegmen {
+  header, .__amegmen--main, .__amegmen--panel {
+    max-width: 384px;
+    width: 50%;
+  }
+  .__amegmen--main {
+    display: flex;
+    height: calc(100% - #{$headerDesktopHeight});
+  }
+  header {
+    height: $headerDesktopHeight;
+  }
+  .__amegmen--panel {
+    height: calc(100% - #{$headerDesktopHeight});
+    top: $headerDesktopHeight;
+  }
+}
+.siteheader {
+  .header-nav {
+    height: $headerDesktopHeight;
+    .site-logo {
+      a {
+        height: 56px;
+        width: 56px;
+      }
+    }
+  }
+}
