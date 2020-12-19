@@ -1,0 +1,21 @@
+.section-wrapper {
+  &.tall-as-device {
+    height: calc(100vh - #{$headerDesktopHeight});
+  }
+  &.half-n-half {
+    flex-direction: row;
+    .half-on-left, .half-on-right {
+      width: 50%;
+    }
+    .half-on-left {
+      align-items: flex-end;
+    }
+    .half-on-right {
+      align-items: flex-start;
+    }
+    .half-content {
+      max-width: 608px;
+      width: 100%;
+    }
+  }
+}

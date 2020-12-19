@@ -1,0 +1,9 @@
+.siteheader {
+  .header-nav {
+    button {
+      &:hover {
+          color: $primary;
+      }
+    }
+  }
+}

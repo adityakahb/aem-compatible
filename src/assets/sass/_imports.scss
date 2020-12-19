@@ -1,0 +1,67 @@
+@import './config/rem';
+@import './config/em';
+@import './config/variables';
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "white":      $white,
+  "black":      $black
+);
+
+$font-family-sans-serif: 'Barlow', sans-serif;;
+
+$grid-breakpoints: (
+  xs: em(0),
+  sm: em(576px),
+  md: em(768px),
+  lg: em(992px),
+  xl: em(1200px),
+  xxl: em(1392px)
+);
+
+$container-max-widths: (
+  sm: rem(560px), // 35
+  md: rem(720px), // 45
+  lg: rem(960px), // 60
+  xl: rem(1160px), // 72.5
+  xxl: rem(1320px) // 82.5
+);
+
+$grid-columns:                12;
+$grid-gutter-width:           rem(32px);
+$grid-row-columns:            6;
+
+$xs: map-get($grid-breakpoints, 'xs');
+$sm: map-get($grid-breakpoints, 'sm');
+$md: map-get($grid-breakpoints, 'md');
+$lg: map-get($grid-breakpoints, 'lg');
+$xl: map-get($grid-breakpoints, 'xl');
+$xxl: map-get($grid-breakpoints, 'xxl');
+
+$spacer: rem(16px);
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 2,
+  5: $spacer * 4,
+);
+
+$breadcrumb-divider: '\279C';
+$border-radius: .5rem;
+$border-radius-sm: .5rem;
+$border-radius-lg: .5rem;
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+@import './config/mixins';

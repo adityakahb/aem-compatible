@@ -1,0 +1,83 @@
+.embed-responsive {
+  background-color: $black;
+}
+[data-theme="dark"] {
+  a {
+    color: $link-color;
+    text-decoration: $link-decoration;
+    background-color: transparent; // Remove the gray background on active links in IE 10.
+  
+    @include hover() {
+      color: lighten($link-color, 10%);
+      text-decoration: $link-hover-decoration;
+    }
+  }
+
+  .blockquote-footer {
+    color: $gray-400;
+  }
+
+  hr {
+    border-top: 1px solid rgba($white, 0.25);
+  }
+
+  .btn {
+    @include hover() {
+      text-decoration: none;
+    }
+  }
+
+  @each $color, $value in $theme-colors {
+    .btn-#{$color} {
+      @include button-variant-dark($value, $value);
+    }
+    @each $color, $value in $theme-colors {
+      .btn-outline-#{$color} {
+        @include button-outline-variant-dark($value);
+      }
+    }
+  }
+
+  .dropdown-menu {
+    color: $gray-200;
+    background-color: $black;
+  }
+
+  .dropdown-item {
+    display: block;
+    width: 100%; // For `<button>`s
+    padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+    clear: both;
+    font-weight: $font-weight-normal;
+    color: $gray-200;
+    text-align: inherit; // For `<button>`s
+    text-decoration: if($link-decoration == none, null, none);
+    white-space: nowrap; // prevent links from randomly breaking onto new lines
+    background-color: transparent; // For `<button>`s
+    border: 0; // For `<button>`s
+  
+    @include hover-focus() {
+      color: darken($gray-200, 5%);
+      text-decoration: none;
+      @include gradient-bg($gray-800);
+    }
+  
+    &.disabled,
+    &:disabled {
+      color: $gray-400;
+      pointer-events: none;
+      background-color: transparent;
+      // Remove CSS gradients if they're enabled
+      @if $enable-gradients {
+        background-image: none;
+      }
+    }
+  }
+}
+// .embed-responsive , .embed-responsive iframe, .embed-responsive embed, .embed-responsive object, .embed-responsive video
+.embed-responsive {
+  background-color: $black;
+  .embed-responsive-item, iframe, embed, object, video {
+    @include center-center;
+  }
+}

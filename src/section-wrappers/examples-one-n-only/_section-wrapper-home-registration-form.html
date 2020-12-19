@@ -1,0 +1,116 @@
+<section class="section-wrapper one-n-only py-5" data-theme="light">
+  <div class="section-content">
+    <div class="max-wrap-half">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <form class="needs-validation" novalidate>
+              <div class="form-group">
+                <label for="registration_email"><strong>Email</strong><strong aria-hidden="true" class="text-danger ml-2">*</strong></label>
+                <input type="email" class="form-control" id="registration_email" required/>
+                <div class="invalid-feedback">
+                  Please provide a valid email.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="registration_password"><strong>Password</strong><strong aria-hidden="true" class="text-danger ml-2">*</strong></label>
+                <input type="password" class="form-control" id="registration_password" required/>
+                <div class="invalid-feedback">
+                  Your password must be have at least 8 characters long, 1 uppercase & 1 lowercase character and 1 number.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="registration_repassword"><strong>Retype Password</strong><strong aria-hidden="true" class="text-danger ml-2">*</strong></label>
+                <input type="password" class="form-control" id="registration_repassword" required/>
+                <div class="invalid-feedback">
+                  This should match the previously entered password.
+                </div>
+              </div>
+              <hr class="my-4"/>
+              <div class="form-group">
+                <label for="registration_title"><strong>Title</strong><strong aria-hidden="true" class="text-danger ml-2">*</strong></label>
+                <select class="form-control custom-select" id="registration_title" required>
+                  <option>Select one</option>
+                  <option>Mr.</option>
+                  <option>Mrs.</option>
+                  <option>Ms.</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please let us know how we should address you.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="registration_firstname"><strong>First name</strong><strong aria-hidden="true" class="text-danger ml-2">*</strong></label>
+                <input type="text" class="form-control" id="registration_firstname" required/>
+                <div class="invalid-feedback">
+                  Well?
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="registration_lastname"><strong>Last name</strong><strong aria-hidden="true" class="text-danger ml-2">*</strong></label>
+                <input type="text" class="form-control" id="registration_lastname" required/>
+                <div class="invalid-feedback">
+                  Come on...
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="registration_jobtitle"><strong>Job Title</strong></label>
+                <input type="text" class="form-control" id="registration_jobtitle"/>
+              </div>
+              <div class="form-group">
+                <label for="registration_company"><strong>Company</strong><strong aria-hidden="true" class="text-danger ml-2">*</strong></label>
+                <input type="text" class="form-control" id="registration_company" required/>
+                <div class="invalid-feedback">
+                  Shouldn't we know the company you are representing?
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="registration_profilepic"><strong>Profile Picture</strong></label>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="registration_profilepic">
+                  <label class="custom-file-label" for="registration_profilepic">Choose file</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="registration_corporatereporting"><strong>Areas of interest</strong></label>
+                <div class="custom-control custom-checkbox">
+                  <input name="registration_areasofinterest" type="checkbox" class="custom-control-input" id="registration_corporatereporting">
+                  <label class="custom-control-label" for="registration_corporatereporting">Corporate Reporting</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input name="registration_areasofinterest" type="checkbox" class="custom-control-input" id="registration_digital">
+                  <label class="custom-control-label" for="registration_digital">Digital</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input name="registration_areasofinterest" type="checkbox" class="custom-control-input" id="registration_sustainability">
+                  <label class="custom-control-label" for="registration_sustainability">Sustainability</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input name="registration_areasofinterest" type="checkbox" class="custom-control-input" id="registration_employeecommunications">
+                  <label class="custom-control-label" for="registration_employeecommunications">Employee Communications</label>
+                </div>
+              </div>
+              <hr class="my-4"/>
+              <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                  <input name="registration_newsletter" type="checkbox" class="custom-control-input" id="registration_newsletter">
+                  <label class="custom-control-label" for="registration_newsletter">I'd like to receive the weekly newsletter</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                  <input name="registration_terms" type="checkbox" class="custom-control-input" id="registration_terms">
+                  <label class="custom-control-label" for="registration_terms">I confirm that I've' read the <a href="#">Privacy policy</a> and I agree to the <a href="#">Terms &amp; Conditions</a>.</a></label>
+                </div>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg mr-3">Register <i class="material-icons-outlined">chevron_right</i></button>
+                <!-- <button type="button" class="btn btn-outline-secondary btn-sm">Cancel</button> -->
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

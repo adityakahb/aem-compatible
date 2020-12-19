@@ -1,0 +1,26 @@
+.sitefooter {
+  .footer-title {
+    position: relative;
+    i {
+      position: absolute;
+      right: rem(16px);
+      top: rem(16px);
+      &.collapsed {
+        display: block;
+      }
+      &.expanded {
+        display: none;
+      }
+    }
+    &[aria-expanded="true"] {
+      i {
+        &.collapsed {
+          display: none;
+        }
+        &.expanded {
+          display: block;
+        } 
+      }
+    }
+  }
+}
