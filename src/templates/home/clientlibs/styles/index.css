@@ -73,10 +73,12 @@ body {
   [data-theme="dark"] .bg-img-wrap-cover {
     background-color: rgba(0, 0, 0, 0.65); }
 
-.material-icons, .material-icons-outlined {
-  font-size: inherit;
-  line-height: inherit;
+i.bi {
+  display: inline-block;
   vertical-align: top; }
+  i.bi::before {
+    vertical-align: top;
+    line-height: inherit; }
 
 main {
   padding-top: 64px; }
@@ -183,6 +185,9 @@ main {
   .avatar-outer img {
     border-radius: 100%;
     width: 100%; }
+
+.row:last-child .teaser-actions, .row:last-child .teaser-video, .row:last-child .teaser-img, .row:last-child .teaser-header, .row:last-child .teaser-intro, .row:last-child .teaser-description {
+  margin: 0 !important; }
 
 body {
   font-size: 14px; }

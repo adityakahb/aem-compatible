@@ -70,10 +70,18 @@ body {
     background-color: rgba($black, 0.65);
   }
 }
-.material-icons, .material-icons-outlined {
-  font-size: inherit;
-  line-height: inherit;
+// .material-icons, .material-icons-outlined {
+//   font-size: inherit;
+//   line-height: inherit;
+//   vertical-align: top;
+// }
+i.bi {
+  display: inline-block;
   vertical-align: top;
+  &::before {
+    vertical-align: top;
+    line-height: inherit;
+  }
 }
 main {
   padding-top: $headerMobileHeight;
@@ -162,7 +170,6 @@ main {
 #sticky_events {
   height: 48px;
 }
-
 .avatar-outer {
   overflow: hidden;
   position: relative;
@@ -192,5 +199,10 @@ main {
   img {
     border-radius: 100%;
     width: 100%;
+  }
+}
+.row:last-child {
+  .teaser-actions, .teaser-video, .teaser-img, .teaser-header, .teaser-intro, .teaser-description {
+    margin: 0 !important;
   }
 }
