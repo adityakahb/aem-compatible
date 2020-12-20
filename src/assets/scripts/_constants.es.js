@@ -3,6 +3,31 @@ export const _HeaderHeightDesktop = '96';
 export const _HeaderBreakpoint = '768';
 export const _LandscapeCSSClass = 'is-landscape';
 export const _PortraitCSSClass = 'is-portrait';
+export const _DefaultCarouselOptions = {
+  dots: false,
+  prevArrow: '<div class="slick-prev border border-right rounded"><button type="button" class="btn btn-lg btn-black"><i class="bi bi-chevron-left"></i></button></div>',
+  nextArrow: '<div class="slick-next border border-right rounded"><button type="button" class="btn btn-lg btn-black"><i class="bi bi-chevron-right"></i></button></div>',
+  responsive4: {
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  }
+};
 export const _GetElemDimensions = function (elem) {
   try {
     let docElem, win, box = { top: 0, left: 0 }, doc = elem && elem.ownerDocument;

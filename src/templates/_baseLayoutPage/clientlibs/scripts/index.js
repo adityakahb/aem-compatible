@@ -1287,6 +1287,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "_HeaderBreakpoint": function() { return /* binding */ _HeaderBreakpoint; },
 /* harmony export */   "_LandscapeCSSClass": function() { return /* binding */ _LandscapeCSSClass; },
 /* harmony export */   "_PortraitCSSClass": function() { return /* binding */ _PortraitCSSClass; },
+/* harmony export */   "_DefaultCarouselOptions": function() { return /* binding */ _DefaultCarouselOptions; },
 /* harmony export */   "_GetElemDimensions": function() { return /* binding */ _GetElemDimensions; },
 /* harmony export */   "_StringTrim": function() { return /* binding */ _StringTrim; },
 /* harmony export */   "_ArrayCall": function() { return /* binding */ _ArrayCall; },
@@ -1323,6 +1324,28 @@ var _HeaderHeightDesktop = '96';
 var _HeaderBreakpoint = '768';
 var _LandscapeCSSClass = 'is-landscape';
 var _PortraitCSSClass = 'is-portrait';
+var _DefaultCarouselOptions = {
+  dots: false,
+  prevArrow: '<div class="slick-prev border border-right rounded"><button type="button" class="btn btn-lg btn-black"><i class="bi bi-chevron-left"></i></button></div>',
+  nextArrow: '<div class="slick-next border border-right rounded"><button type="button" class="btn btn-lg btn-black"><i class="bi bi-chevron-right"></i></button></div>',
+  responsive4: {
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [{
+      breakpoint: 1199,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }, {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }]
+  }
+};
 var _GetElemDimensions = function _GetElemDimensions(elem) {
   try {
     var docElem,

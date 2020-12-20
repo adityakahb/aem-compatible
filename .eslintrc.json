@@ -12,8 +12,10 @@
   },
   "extends": "eslint:recommended",
   "globals": {
-    "lazysizes": true,
+    "$": true,
     "Atomics": "readonly",
+    "jquery": true,
+    "lazysizes": true,
     "SharedArrayBuffer": "readonly"
   }
 }

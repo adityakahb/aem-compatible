@@ -121,8 +121,15 @@ main {
 
 .section-wrapper {
   &.tall-as-device {
-    .swiper-container {
+    .slick-list, .slick-track, .slick-slide, .slick-slide > div {
+      // display: flex;
       height: 100%;
+    }
+    .slick-slide {
+      position: relative;
+    }
+    .slick-slide > div {
+      width: 100%;
     }
     .embed-responsive {
       // display: flex;
@@ -138,14 +145,24 @@ main {
     }
   }
 }
-.swiper-button-prev, .swiper-button-next {
-  height: 44px;
-  color: $white;
-  width: 44px;
-  margin-top: -22px;
-  &::after {
-    display: none;
+.slick-prev, .slick-next {
+  bottom: 8px;
+  height: 56px;
+  position: absolute;
+  width: 56px;
+  z-index: 123;
+  button {
+    height: 54px;
+    width: 54px;
   }
+}
+.slick-prev {
+  margin-right: 4px;
+  right: 50%;
+}
+.slick-next {
+  left: 50%;
+  margin-left: 4px;
 }
 .sticky-nav {
   z-index: 1020;

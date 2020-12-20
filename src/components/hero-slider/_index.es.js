@@ -1,16 +1,15 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
-
+import 'slick-carousel';
+import { _DefaultCarouselOptions } from './../../assets/scripts/_constants.es';
 export default class HeroSlider {
   constructor() {
-    Swiper.use([Navigation, Pagination]);
   }
   __init() {
-    new Swiper('.hero-slider .swiper-container', {
-      loop: false,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    })    
+    const heroElem = document.querySelector('.hero-slider');
+    const heroSliderOptions = {};
+    heroSliderOptions.nextArrow = _DefaultCarouselOptions.nextArrow;
+    heroSliderOptions.prevArrow = _DefaultCarouselOptions.prevArrow;
+    if (heroElem && $) {
+      $('.hero-slider').slick(heroSliderOptions);
+    }
   }
 }

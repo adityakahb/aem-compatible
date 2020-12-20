@@ -1,10 +1,45 @@
 <div class="hero-slider" data-theme="light">
-  <!-- Swiper -->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="bg-img-wrap-p">
-          <div class="bg-img-wrap">
+  <div class="hero-slide">
+    <div class="bg-img-wrap-p">
+      <div class="bg-img-wrap">
+        <picture>
+          <source media="(min-width: 1200px)"
+          data-srcset="../../assets/images/research-1280x1280.jpg 1x, ../../assets/images/research-2560x2560.jpg 2x">
+        <source media="(min-width: 750px)"
+          data-srcset="../../assets/images/research-1040x1040.jpg 1x, ../../assets/images/research-2080x2080.jpg 2x">
+        <img alt="Alt definition required" class="bg-img-wrap-src lazyload" src="../../assets/images/research-400x400.jpg"
+          data-srcset="../../assets/images/research-800x800.jpg 1x, ../../assets/images/research-1600x1600.jpg 2x">
+        </picture>
+        <div class="bg-img-wrap-cover"></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-slide">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item lazyload" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/C0DPdy98e4c?enablejsapi=1" frameborder="0"></iframe>
+    </div>
+  </div>
+  <div class="hero-slide">
+    <div class="bg-img-wrap-p">
+      <div class="bg-img-wrap">
+        <picture>
+          <source media="(min-width: 1200px)"
+            data-srcset="https://via.placeholder.com/1280x1280/abcdef/ffffff 1x, https://via.placeholder.com/2560x2560/abcdef/ffffff 2x">
+          <source media="(min-width: 750px)"
+            data-srcset="https://via.placeholder.com/1040x1040/abcdef/ffffff 1x, https://via.placeholder.com/2080x2080/abcdef/ffffff 2x">
+          <img alt="Alt definition required" class="bg-img-wrap-src lazyload" src="https://via.placeholder.com/400x400/abcdef/ffffff"
+            data-srcset="https://via.placeholder.com/800x800/abcdef/ffffff 1x, https://via.placeholder.com/1600x1600/abcdef/ffffff 2x">
+        </picture>
+        <div class="bg-img-wrap-cover"></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-slide">
+    <div class="embed-responsive embed-responsive-4by3">
+      <iframe class="embed-responsive-item lazyload" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/NpEaa2P7qZI?enablejsapi=1" frameborder="0"></iframe>
+    </div>
+  </div>
+</div>
             <!-- <picture>
               <source media="(min-width: 1200px)"
                 data-srcset="https://via.placeholder.com/1280x720/abcdef/F8146A 1x, https://via.placeholder.com/2560x1440/abcdef/F8146A 2x">
@@ -13,52 +48,3 @@
               <img alt="Alt definition required" class="bg-img-wrap-src lazyload" src="https://via.placeholder.com/450x800/abcdef/F8146A"
                 data-srcset="https://via.placeholder.com/450x800/abcdef/F8146A 1x, https://via.placeholder.com/900x1600/abcdef/F8146A 2x">
             </picture> -->
-            <picture>
-              <source media="(min-width: 1200px)"
-              data-srcset="../../assets/images/research-1280x1280.jpg 1x, ../../assets/images/research-2560x2560.jpg 2x">
-            <source media="(min-width: 750px)"
-              data-srcset="../../assets/images/research-1040x1040.jpg 1x, ../../assets/images/research-2080x2080.jpg 2x">
-            <img alt="Alt definition required" class="bg-img-wrap-src lazyload" src="../../assets/images/research-400x400.jpg"
-              data-srcset="../../assets/images/research-800x800.jpg 1x, ../../assets/images/research-1600x1600.jpg 2x">
-            </picture>
-            <div class="bg-img-wrap-cover"></div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="embed-responsive embed-responsive-16by9">
-          <div class="embed-responsive-item lazyload youtube-video" id="heroslider_video1" data-videoid="C0DPdy98e4c"></div>
-          <!-- <iframe data-src="//www.youtube.com/embed/ZfV-aYdU4uE?enablejsapi=1" class="embed-responsive-item lazyload" frameborder="0" allowfullscreen></iframe> -->
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="bg-img-wrap-p">
-          <div class="bg-img-wrap">
-            <picture>
-              <source media="(min-width: 1200px)"
-                data-srcset="https://via.placeholder.com/1280x1280/abcdef/ffffff 1x, https://via.placeholder.com/2560x2560/abcdef/ffffff 2x">
-              <source media="(min-width: 750px)"
-                data-srcset="https://via.placeholder.com/1040x1040/abcdef/ffffff 1x, https://via.placeholder.com/2080x2080/abcdef/ffffff 2x">
-              <img alt="Alt definition required" class="bg-img-wrap-src lazyload" src="https://via.placeholder.com/400x400/abcdef/ffffff"
-                data-srcset="https://via.placeholder.com/800x800/abcdef/ffffff 1x, https://via.placeholder.com/1600x1600/abcdef/ffffff 2x">
-            </picture>
-            <div class="bg-img-wrap-cover"></div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="embed-responsive embed-responsive-4by3">
-          <div class="embed-responsive-item lazyload youtube-video" id="heroslider_video2" data-videoid="NpEaa2P7qZI"></div>
-          <!-- <iframe data-src="//www.youtube.com/embed/mM5_T-F1Yn4?enablejsapi=1" class="embed-responsive-item lazyload" frameborder="0" allowfullscreen></iframe> -->
-        </div>
-      </div>
-    </div>
-    <!-- Add Arrows -->
-    <button class="btn btn-info swiper-button-next">
-      <i class="bi bi-chevron-right"></i>
-    </button>
-    <button class="btn btn-info swiper-button-prev">
-      <i class="bi bi-chevron-left"></i>
-    </button>
-  </div>
-</div>
