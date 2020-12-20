@@ -15,11 +15,13 @@
   }
   &.half-n-half {
     flex-direction: column;
+    &, .half-on-left, .half-on-right {
+      position: relative;
+    }
     .half-on-left, .half-on-right {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      position: relative;
       width: 100%;
     }
     .half-content {

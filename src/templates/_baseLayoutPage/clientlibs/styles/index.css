@@ -14543,11 +14543,12 @@ a.text-black:hover, a.text-black:focus {
     min-height: 1px; }
   .section-wrapper.half-n-half {
     flex-direction: column; }
+    .section-wrapper.half-n-half, .section-wrapper.half-n-half .half-on-left, .section-wrapper.half-n-half .half-on-right {
+      position: relative; }
     .section-wrapper.half-n-half .half-on-left, .section-wrapper.half-n-half .half-on-right {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      position: relative;
       width: 100%; }
     .section-wrapper.half-n-half .half-content {
       min-height: 1px; }

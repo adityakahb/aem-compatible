@@ -186,7 +186,7 @@ main {
     border-radius: 100%;
     width: 100%; }
 
-.row:last-child .teaser-actions, .row:last-child .teaser-video, .row:last-child .teaser-img, .row:last-child .teaser-header, .row:last-child .teaser-intro, .row:last-child .teaser-description {
+.standard-teaser .row:last-child .teaser-actions, .standard-teaser .row:last-child .teaser-video, .standard-teaser .row:last-child .teaser-img, .standard-teaser .row:last-child .teaser-header, .standard-teaser .row:last-child .teaser-intro, .standard-teaser .row:last-child .teaser-description {
   margin: 0 !important; }
 
 body {
@@ -220,15 +220,15 @@ h2, .h2 {
       h2, .h2 {
         font-size: 47.25px; } }
 
-h3, .h3 {
+h3, .h3, blockquote, .blockquote {
   font-size: 1.5625rem; }
-  h3, .h3 {
+  h3, .h3, blockquote, .blockquote {
     font-size: 21.875px; }
     @media (min-width: 368px) {
-      h3, .h3 {
+      h3, .h3, blockquote, .blockquote {
         font-size: calc(21.875px + 9.625 * ((100vw - 368px) / 1072)); } }
     @media (min-width: 1440px) {
-      h3, .h3 {
+      h3, .h3, blockquote, .blockquote {
         font-size: 31.5px; } }
 
 h4, .h4 {
@@ -245,11 +245,14 @@ h4, .h4 {
 body {
   font-weight: 400; }
 
-h1, .h1, h2, .h2, h3, .h3, .lead {
+h1, .h1, h2, .h2, h3, .h3, .lead, blockquote, .blockquote {
   font-weight: 300; }
 
 h4, .h4, h5, .h5, h6, .h6 {
   font-weight: 700; }
+
+blockquote, .blockquote {
+  font-style: italic; }
 
 .hero-slider {
   height: 100%; }

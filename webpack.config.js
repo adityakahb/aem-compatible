@@ -10,9 +10,9 @@ const webpack = require('webpack');
 const devExtraFiles = new RegExp(/(\.css\.js|\.css\.js\.map)$/, 'm');
 const prodExtraFiles = new RegExp(/(\.css\.js|\.css\.js\.map|\.js\.map|\.css\.map)$/, 'm');
 
-console.log(glob.sync(`{./src/templates/**/head-scripts.es.js,./src/templates/**/index.es.js,./src/templates/**/*.scss}`).reduce((x, y) => {
-  return path.basename(y).indexOf('head-scripts.es') < 0 ? Object.assign(x, { [removeFilePart(y) + '/index']: y }) : Object.assign(x, {[removeFilePart(y) + '/head-scripts']: y})
-}, {}));
+// console.log(glob.sync(`{./src/templates/**/head-scripts.es.js,./src/templates/**/index.es.js,./src/templates/**/*.scss}`).reduce((x, y) => {
+//   return path.basename(y).indexOf('head-scripts.es') < 0 ? Object.assign(x, { [removeFilePart(y) + '/index']: y }) : Object.assign(x, {[removeFilePart(y) + '/head-scripts']: y})
+// }, {}));
 
 module.exports = (env, argv) => {
   return {

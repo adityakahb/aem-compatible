@@ -16,7 +16,7 @@ h2, .h2 {
   font-size: $mod_1*$mod_1*$mod_1 *1rem; 
   @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
 }
-h3, .h3 { 
+h3, .h3, blockquote, .blockquote { 
   font-size: $mod_1*$mod_1 *1rem;
   @include fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font);
 }
@@ -27,9 +27,12 @@ h4, .h4 {
 body {
   font-weight: 400;
 }
-h1, .h1, h2, .h2, h3, .h3, .lead {
+h1, .h1, h2, .h2, h3, .h3, .lead, blockquote, .blockquote {
   font-weight: 300;
 }
 h4, .h4, h5, .h5, h6, .h6 {
   font-weight: 700;
+}
+blockquote, .blockquote {
+  font-style: italic;
 }
