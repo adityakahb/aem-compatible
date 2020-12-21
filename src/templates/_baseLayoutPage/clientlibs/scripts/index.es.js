@@ -35,17 +35,17 @@ class GlobalScripts {
     }, 0);
   }
   __initHeader() {
+    bodyElem = document.querySelector('body');
+    bgElements = Array.prototype.slice.call(document.querySelectorAll('.bg-img-wrap') || []);
+    this.reportWindowOrientation();
+    window.addEventListener('resize', this.reportWindowOrientation, false);
+
     const siteheader = new SiteHeader();
     const vendors = new Vendors();
     siteheader.__init();
     vendors.__init();
   }
   __init() {
-    bodyElem = document.querySelector('body');
-    bgElements = Array.prototype.slice.call(document.querySelectorAll('.bg-img-wrap') || []);
-    this.reportWindowOrientation();
-    window.addEventListener('resize', this.reportWindowOrientation, false);
-
     const sitefooter = new SiteFooter();
     sitefooter.__init();
   }

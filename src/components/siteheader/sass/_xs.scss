@@ -2,18 +2,18 @@
   .__amegmen--canvas {
     @include transition($transition-base);
     height: 100%;
-    left: 0;
+    left: -100%;
     overflow: hidden;
     position: fixed;
     top: 0;
-    transform: translate(-100.5%, 0);
+    transform: translate(0, 0);
     visibility: hidden;
     width: 100%;
     z-index: 1040;
 
     &.active {
       visibility: visible;
-      transform: translate(0, 0);
+      transform: translate(100%, 0);
     }
   }
 

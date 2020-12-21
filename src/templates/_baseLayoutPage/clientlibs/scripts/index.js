@@ -1325,25 +1325,24 @@ var _HeaderBreakpoint = '768';
 var _LandscapeCSSClass = 'is-landscape';
 var _PortraitCSSClass = 'is-portrait';
 var _DefaultCarouselOptions = {
-  dots: false,
-  prevArrow: '<div class="slick-prev border border-right rounded"><button type="button" class="btn btn-lg btn-black"><i class="bi bi-chevron-left"></i></button></div>',
-  nextArrow: '<div class="slick-next border border-right rounded"><button type="button" class="btn btn-lg btn-black"><i class="bi bi-chevron-right"></i></button></div>',
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next>button',
+    prevEl: '.swiper-button-prev>button'
+  },
   responsive4: {
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [{
-      breakpoint: 1199,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2
+      },
+      1200: {
+        slidesPerView: 4,
+        slidesPerGroup: 4
       }
-    }, {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }]
+    }
   }
 };
 var _GetElemDimensions = function _GetElemDimensions(elem) {
@@ -1641,6 +1640,10 @@ var GlobalScripts = /*#__PURE__*/function () {
   }, {
     key: "__initHeader",
     value: function __initHeader() {
+      bodyElem = document.querySelector('body');
+      bgElements = Array.prototype.slice.call(document.querySelectorAll('.bg-img-wrap') || []);
+      this.reportWindowOrientation();
+      window.addEventListener('resize', this.reportWindowOrientation, false);
       var siteheader = new _components_siteheader_index_es__WEBPACK_IMPORTED_MODULE_7__.default();
       var vendors = new _assets_scripts_vendors_es__WEBPACK_IMPORTED_MODULE_6__.default();
 
@@ -1651,10 +1654,6 @@ var GlobalScripts = /*#__PURE__*/function () {
   }, {
     key: "__init",
     value: function __init() {
-      bodyElem = document.querySelector('body');
-      bgElements = Array.prototype.slice.call(document.querySelectorAll('.bg-img-wrap') || []);
-      this.reportWindowOrientation();
-      window.addEventListener('resize', this.reportWindowOrientation, false);
       var sitefooter = new _components_sitefooter_index_es__WEBPACK_IMPORTED_MODULE_8__.default();
 
       sitefooter.__init();

@@ -1,3 +1,7 @@
 .hero-slider {
   height: 100%;
+  .hero-teaser {
+    position: relative;
+    z-index: 16;
+  }
 }

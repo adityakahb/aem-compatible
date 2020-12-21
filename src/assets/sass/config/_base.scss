@@ -60,7 +60,7 @@ body {
   background-color: $gray-100;
   color: $gray-900;
   .bg-img-wrap-cover {
-    background-color: rgba($white, 0.75);
+    background-color: rgba($white, 0.65);
   }
 }
 [data-theme="dark"] {
@@ -121,15 +121,8 @@ main {
 
 .section-wrapper {
   &.tall-as-device {
-    .slick-list, .slick-track, .slick-slide, .slick-slide > div {
-      // display: flex;
+    .swiper-container {
       height: 100%;
-    }
-    .slick-slide {
-      position: relative;
-    }
-    .slick-slide > div {
-      width: 100%;
     }
     .embed-responsive {
       // display: flex;
@@ -145,24 +138,33 @@ main {
     }
   }
 }
-.slick-prev, .slick-next {
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-button-prev, .swiper-button-next {
   bottom: 8px;
   height: 56px;
-  position: absolute;
+  left: auto;
+  right: auto;
+  top: auto;
   width: 56px;
-  z-index: 123;
   button {
     height: 54px;
     width: 54px;
   }
+  &::after {
+    display: none;
+  }
 }
-.slick-prev {
-  margin-right: 4px;
-  right: 50%;
-}
-.slick-next {
+.swiper-button-next {
   left: 50%;
   margin-left: 4px;
+}
+.swiper-button-prev {
+  margin-right: 4px;
+  right: 50%;
 }
 .sticky-nav {
   z-index: 1020;
