@@ -36,6 +36,7 @@
     "amegmen": "^1.0.4",
     "bootstrap": "^4.5.3",
     "bootstrap-icons": "^1.2.1",
+    "colorthief": "^2.3.2",
     "jquery": "^3.5.1",
     "lazysizes": "^5.3.0-beta1",
     "moment": "^2.29.1",
