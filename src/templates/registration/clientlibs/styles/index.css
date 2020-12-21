@@ -65,13 +65,17 @@ body {
   background-color: #f8f9fa;
   color: #212529; }
   [data-theme="light"] .bg-img-wrap-cover {
-    background-color: rgba(255, 255, 255, 0.65); }
+    background-color: rgba(255, 255, 255, 0.25); }
+  [data-theme="light"] [data-theme="light"] {
+    background-color: rgba(248, 249, 250, 0.85); }
 
 [data-theme="dark"] {
   background-color: #212529;
   color: #f8f9fa; }
   [data-theme="dark"] .bg-img-wrap-cover {
-    background-color: rgba(0, 0, 0, 0.65); }
+    background-color: rgba(0, 0, 0, 0.25); }
+  [data-theme="dark"] [data-theme="dark"] {
+    background-color: rgba(33, 37, 41, 0.85); }
 
 i.bi {
   display: inline-block;
@@ -114,10 +118,14 @@ main {
     height: 100%; }
 
 .bg-img-wrap-cover {
+  display: none;
   z-index: 1; }
 
 .section-wrapper.tall-as-device .swiper-container {
   height: 100%; }
+
+.section-wrapper.tall-as-device .max-wrap, .section-wrapper.tall-as-device .max-wrap-half {
+  margin: 0; }
 
 .section-wrapper.tall-as-device .embed-responsive {
   height: 100%; }

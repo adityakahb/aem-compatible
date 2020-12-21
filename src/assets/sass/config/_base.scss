@@ -60,14 +60,20 @@ body {
   background-color: $gray-100;
   color: $gray-900;
   .bg-img-wrap-cover {
-    background-color: rgba($white, 0.65);
+    background-color: rgba($white, 0.25);
+  }
+  [data-theme="light"] {
+    background-color: rgba($gray-100, 0.85);
   }
 }
 [data-theme="dark"] {
   background-color: $gray-900;
   color: $gray-100;
   .bg-img-wrap-cover {
-    background-color: rgba($black, 0.65);
+    background-color: rgba($black, 0.25);
+  }
+  [data-theme="dark"] {
+    background-color: rgba($gray-900, 0.85);
   }
 }
 // .material-icons, .material-icons-outlined {
@@ -116,6 +122,7 @@ main {
   }
 }
 .bg-img-wrap-cover {
+  display: none;
   z-index: 1;
 }
 
@@ -123,6 +130,9 @@ main {
   &.tall-as-device {
     .swiper-container {
       height: 100%;
+    }
+    .max-wrap, .max-wrap-half {
+      margin: 0;
     }
     .embed-responsive {
       // display: flex;
