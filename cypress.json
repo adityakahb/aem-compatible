@@ -1,10 +1,10 @@
 {
-  "projectId": "ouk63g",
-  "screenshotsFolder": "cypress/results/screenshots",
-  "videosFolder": "cypress/results/videos",
+  "projectId": "okall",
   "reporterOptions": {
     "overwrite": false,
     "html": true,
-    "json": true
+    "json": true,
+    "video": false,
+    "screenshotOnRunFailure": false
   }
 }

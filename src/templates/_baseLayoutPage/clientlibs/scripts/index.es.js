@@ -6,46 +6,9 @@ import {_AddClass, _RemoveClass, _LandscapeCSSClass, _PortraitCSSClass, _GetElem
 let bodyElem;
 let bgElements;
 let bgElementDimension;
-let imgElem;
-let bgMaskElem;
 
 class GlobalScripts {
   constructor() {}
-  imgLoadEvent() {
-    if ((bgElements || []).length > 0) {
-      bgElements.forEach(element => {
-        imgElem = element.querySelector('img');
-        bgMaskElem = element.querySelector('.bg-img-wrap-cover');
-        if (imgElem && !(bgMaskElem || {}).getAttribute('data-mask')) {
-          // try {
-          //   if (imgElem.complete) {
-          //     thisColor = _GetAverageColor(imgElem);
-          //     if (thisColor) {
-          //       bgMaskElem.setAttribute('data-mask', _RGBToHex(thisColor.r, thisColor.g, thisColor.b));
-          //       console.log('======', `rgba(${thisColor.r}, ${thisColor.g}, ${thisColor.b}, 0.65)`);
-          //       bgMaskElem.style.backgroundColor = `rgba(${thisColor.r}, ${thisColor.g}, ${thisColor.b}, 0.65)`;
-          //     } else {
-          //       bgMaskElem.setAttribute('data-mask', 'na');
-          //     }
-          //   } else {
-          //     imgElem.addEventListener('load', function() {
-          //       thisColor = _GetAverageColor(imgElem);
-          //       if (thisColor) {
-          //         bgMaskElem.setAttribute('data-mask', _RGBToHex(thisColor.r, thisColor.g, thisColor.b));
-          //         console.log('======', `rgba(${thisColor.r}, ${thisColor.g}, ${thisColor.b}, 0.65)`);
-          //         bgMaskElem.style.backgroundColor = `rgba(${thisColor.r}, ${thisColor.g}, ${thisColor.b}, 0.65)`;
-          //       } else {
-          //         bgMaskElem.setAttribute('data-mask', 'na');
-          //       }
-          //     });
-          //   }
-          // } catch (e) {
-          //   console.log('CORS issue on ' + imgElem.getAttribute('src'));
-          // }
-        }
-      });
-    }
-  }
   reportWindowOrientation() {
     setTimeout(() => {
       if ((bgElements || []).length > 0) {
@@ -76,7 +39,6 @@ class GlobalScripts {
     bgElements = Array.prototype.slice.call(document.querySelectorAll('.bg-img-wrap') || []);
     this.reportWindowOrientation();
     window.addEventListener('resize', this.reportWindowOrientation, false);
-    this.imgLoadEvent();
 
     const siteheader = new SiteHeader();
     const vendors = new Vendors();

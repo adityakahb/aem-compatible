@@ -16,6 +16,8 @@
     "Atomics": "readonly",
     "jquery": true,
     "lazysizes": true,
+    "Cypress": true,
+    "cy": true,
     "SharedArrayBuffer": "readonly"
   }
 }

@@ -19,14 +19,13 @@ module.exports = (env, argv) => {
     entry: glob.sync(`{./src/templates/**/head-scripts.es.js,./src/templates/**/index.es.js,./src/templates/**/*.scss}`).reduce((x, y) => {
       return path.basename(y).indexOf('head-scripts.es') < 0 ? Object.assign(x, { [removeFilePart(y) + '/index']: y }) : Object.assign(x, {[removeFilePart(y) + '/head-scripts']: y})
     }, {}),
-    mode: 'development',
     output: {
       path: path.resolve(__dirname),
       filename: (pathData) => {
         return pathData.chunk.name.indexOf('/styles/') < 0 ? '[name].js' : '[name].css.js';
       }
     },
-    devtool: 'inline-source-map',
+    devtool: false,
     target: ['web', 'es5'],
     module: {
       rules: [{
@@ -36,7 +35,7 @@ module.exports = (env, argv) => {
             loader: 'babel-loader'
           }
         },
-        {
+        { 
           test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
           use: [
             {
@@ -71,6 +70,10 @@ module.exports = (env, argv) => {
       ]
     },
     plugins: [
+      new webpack.ContextReplacementPlugin(
+        /moment[/\\]locale$/,
+        /en/
+      ),
       new ProgressBarPlugin(),
       new webpack.ProvidePlugin({
         $: 'jquery',
