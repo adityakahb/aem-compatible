@@ -18,5 +18,7 @@ src/**/*.css.map
 src/**/*.js.map
 
 .nyc_output
+cypress/videos
+cypress/screenshots
 
 package-lock.json
