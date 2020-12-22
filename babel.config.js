@@ -1,7 +1,5 @@
-module.exports = function (api) {
-  api.cache(true);
-
-  const presets = [
+module.exports = {
+  presets: [
     [
       "@babel/preset-env", {
         modules: false,
@@ -9,8 +7,9 @@ module.exports = function (api) {
         corejs: 3,
       }
     ]
-  ];
-  const plugins = [
+  ],
+  plugins: [
+    'istanbul',
     [
       '@babel/plugin-transform-runtime', {
         helpers: true,
@@ -18,9 +17,5 @@ module.exports = function (api) {
         useESModules: false
       }
     ]
-  ];
-  return {
-    presets,
-    plugins
-  };
+  ]
 }

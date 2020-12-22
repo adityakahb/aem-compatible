@@ -17,4 +17,6 @@ Thumbs.db
 src/**/*.css.map
 src/**/*.js.map
 
+.nyc_output
+
 package-lock.json

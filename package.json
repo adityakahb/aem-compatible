@@ -6,7 +6,8 @@
   "scripts": {
     "build:dev": "webpack --watch --mode development",
     "build:prod": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:chrome": "cypress run --browser chrome --spec cypress/integration/home/home.spec.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,9 +16,13 @@
     "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/runtime-corejs3": "^7.12.5",
+    "@cypress/code-coverage": "^3.8.8",
     "babel-loader": "^8.2.2",
+    "babel-plugin-istanbul": "^6.0.0",
     "core-js": "^3.8.1",
     "css-loader": "^5.0.1",
+    "cypress": "^6.2.0",
+    "cypress-dark": "^1.7.14",
     "eslint": "^7.15.0",
     "file-loader": "^6.2.0",
     "glob": "^7.1.6",

@@ -1,10 +1,7 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./node_modules/@babel/runtime/helpers/classCallCheck.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/classCallCheck.js ***!
-  \***************************************************************/
+/***/ 4575:
 /***/ (function(module) {
 
 function _classCallCheck(instance, Constructor) {
@@ -17,10 +14,7 @@ module.exports = _classCallCheck;
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/createClass.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/createClass.js ***!
-  \************************************************************/
+/***/ 3913:
 /***/ (function(module) {
 
 function _defineProperties(target, props) {
@@ -43,54 +37,7 @@ module.exports = _createClass;
 
 /***/ }),
 
-/***/ "./src/templates/_baseLayoutPage/clientlibs/scripts/head-scripts.es.js":
-/*!*****************************************************************************!*\
-  !*** ./src/templates/_baseLayoutPage/clientlibs/scripts/head-scripts.es.js ***!
-  \*****************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var lazysizes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lazysizes */ "./node_modules/lazysizes/lazysizes.js");
-/* harmony import */ var lazysizes__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lazysizes__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var picturefill__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! picturefill */ "./node_modules/picturefill/dist/picturefill.js");
-/* harmony import */ var picturefill__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(picturefill__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
-
-
-var HeadScripts = /*#__PURE__*/function () {
-  function HeadScripts() {
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, HeadScripts);
-  }
-
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(HeadScripts, [{
-    key: "__init",
-    value: function __init() {
-      if (typeof (picturefill__WEBPACK_IMPORTED_MODULE_3___default()) === "function") {
-        picturefill__WEBPACK_IMPORTED_MODULE_3___default()();
-      }
-    }
-  }]);
-
-  return HeadScripts;
-}();
-
-var hscripts = new HeadScripts();
-
-hscripts.__init();
-
-/***/ }),
-
-/***/ "./node_modules/lazysizes/lazysizes.js":
-/*!*********************************************!*\
-  !*** ./node_modules/lazysizes/lazysizes.js ***!
-  \*********************************************/
+/***/ 7090:
 /***/ (function(module) {
 
 (function(window, factory) {
@@ -856,10 +803,7 @@ hscripts.__init();
 
 /***/ }),
 
-/***/ "./node_modules/picturefill/dist/picturefill.js":
-/*!******************************************************!*\
-  !*** ./node_modules/picturefill/dist/picturefill.js ***!
-  \******************************************************/
+/***/ 7229:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*! picturefill - v3.0.2 - 2016-02-12
@@ -2466,22 +2410,221 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*! picturefill - v3.0.2 - 2016-02-12
 /******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
 /******/ 	}();
 /******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	!function() {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = function(exports) {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	}();
-/******/ 	
 /************************************************************************/
-/******/ 	// startup
-/******/ 	// Load entry module
-/******/ 	__webpack_require__("./src/templates/_baseLayoutPage/clientlibs/scripts/head-scripts.es.js");
-/******/ 	// This entry module used 'exports' so it can't be inlined
+!function() {
+"use strict";
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4575);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3913);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lazysizes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7090);
+/* harmony import */ var lazysizes__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lazysizes__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var picturefill__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7229);
+/* harmony import */ var picturefill__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(picturefill__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+function cov_2az4ai89th() {
+  var path = "C:\\MAMP\\htdocs\\aem-compatible\\src\\templates\\_baseLayoutPage\\clientlibs\\scripts\\head-scripts.es.js";
+  var hash = "577d2772a2885885dba4fc5c3cc31a672d7b6df7";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "C:\\MAMP\\htdocs\\aem-compatible\\src\\templates\\_baseLayoutPage\\clientlibs\\scripts\\head-scripts.es.js",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 4
+        },
+        end: {
+          line: 10,
+          column: 5
+        }
+      },
+      "1": {
+        start: {
+          line: 9,
+          column: 6
+        },
+        end: {
+          line: 9,
+          column: 20
+        }
+      },
+      "2": {
+        start: {
+          line: 14,
+          column: 17
+        },
+        end: {
+          line: 14,
+          column: 34
+        }
+      },
+      "3": {
+        start: {
+          line: 15,
+          column: 0
+        },
+        end: {
+          line: 15,
+          column: 18
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 5,
+            column: 2
+          },
+          end: {
+            line: 5,
+            column: 3
+          }
+        },
+        loc: {
+          start: {
+            line: 5,
+            column: 16
+          },
+          end: {
+            line: 5,
+            column: 18
+          }
+        },
+        line: 5
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 7,
+            column: 2
+          },
+          end: {
+            line: 7,
+            column: 3
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 11
+          },
+          end: {
+            line: 11,
+            column: 3
+          }
+        },
+        line: 7
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 8,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 8,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        }, {
+          start: {
+            line: 8,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        }],
+        line: 8
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "577d2772a2885885dba4fc5c3cc31a672d7b6df7"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2az4ai89th = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+
+cov_2az4ai89th();
+
+
+
+var HeadScripts = /*#__PURE__*/function () {
+  function HeadScripts() {
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, HeadScripts);
+
+    cov_2az4ai89th().f[0]++;
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(HeadScripts, [{
+    key: "__init",
+    value: function __init() {
+      cov_2az4ai89th().f[1]++;
+      cov_2az4ai89th().s[0]++;
+
+      if (typeof (picturefill__WEBPACK_IMPORTED_MODULE_3___default()) === "function") {
+        cov_2az4ai89th().b[0][0]++;
+        cov_2az4ai89th().s[1]++;
+        picturefill__WEBPACK_IMPORTED_MODULE_3___default()();
+      } else {
+        cov_2az4ai89th().b[0][1]++;
+      }
+    }
+  }]);
+
+  return HeadScripts;
+}();
+
+var hscripts = (cov_2az4ai89th().s[2]++, new HeadScripts());
+cov_2az4ai89th().s[3]++;
+
+hscripts.__init();
+}();
 /******/ })()
 ;
 //# sourceMappingURL=head-scripts.js.map
