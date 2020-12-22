@@ -1,6 +1,16 @@
 .embed-responsive {
   background-color: $black;
 }
+b, strong {
+  font-weight: $font-weight-bold;
+}
+@each $color, $value in $theme-colors {
+  @each $color, $value in $theme-colors {
+    .btn-outline-#{$color} {
+      @include button-outline-variant-v2($value);
+    }
+  }
+}
 [data-theme="dark"] {
   a {
     color: $link-color;
@@ -33,7 +43,7 @@
     }
     @each $color, $value in $theme-colors {
       .btn-outline-#{$color} {
-        @include button-outline-variant-dark($value);
+        @include button-outline-variant-v2($value);
       }
     }
   }

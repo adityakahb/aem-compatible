@@ -2,7 +2,7 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~bootstrap-icons/font/bootstrap-icons.css';
 @import './../../../../assets/sass/config/bootstrap-overrides';
-@import './../../../../assets/sass/config/ie11';
+@import './../../../../assets/sass/config/typography';
 
 @import '~swiper/swiper';
 @import '~swiper/components/a11y/a11y';
@@ -18,6 +18,8 @@
 @import '~swiper/components/thumbs/thumbs.scss';
 @import '~swiper/components/zoom/zoom.scss';
 
+@import './../../../../assets/sass/config/base';
+@import './../../../../assets/sass/config/ie11';
 
 @import './../../../../section-wrappers/index';
 @import './../../../../components/siteheader/index';

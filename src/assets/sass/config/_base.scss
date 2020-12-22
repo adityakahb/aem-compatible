@@ -21,7 +21,6 @@ body {
   margin: 0 auto;
   width: 100%;
 }
-
 .top-0 {
   top: 0 !important;
 }
@@ -234,4 +233,7 @@ main {
   .teaser-actions, .teaser-video, .teaser-img, .teaser-header, .teaser-intro, .teaser-description {
     margin: 0 !important;
   }
+}
+.article-comp img {
+  max-width: 100%;
 }

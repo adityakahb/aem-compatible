@@ -148,9 +148,10 @@
   }
 }
 
-@mixin button-outline-variant-dark($color, $color-hover: color-yiq($color), $active-background: $color, $active-border: $color) {
+@mixin button-outline-variant-v2($color, $color-hover: color-yiq($color), $active-background: $color, $active-border: $color) {
   color: $color;
   border-color: $color;
+  background-color: rgba(darken($active-background, 20%), 0.1);
 
   @include hover() {
     color: $color-hover;
