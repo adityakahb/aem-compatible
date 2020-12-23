@@ -25,8 +25,17 @@ module.exports = (env, argv) => {
         return pathData.chunk.name.indexOf('/styles/') < 0 ? '[name].js' : '[name].css.js';
       }
     },
-    devtool: false,
     target: ['web', 'es5'],
+    optimization: {
+      minimize: false
+    },
+    devtool: false,
+    resolve: {
+      extensions: ['.js'],
+      alias: {
+        'jquery': 'jquery/dist/jquery.slim.js',
+      }
+    },
     module: {
       rules: [{
           test: /\.m?js$/,
@@ -109,9 +118,6 @@ module.exports = (env, argv) => {
           }]
         }
       })
-    ],
-    optimization: {
-      minimize: false
-    }
+    ]
   };
 };
