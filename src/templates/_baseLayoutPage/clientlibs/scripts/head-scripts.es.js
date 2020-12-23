@@ -1,4 +1,4 @@
-import lazysizes from 'lazysizes';
+import 'lazysizes';
 import picturefill from 'picturefill';
 
 class HeadScripts {
@@ -11,5 +11,7 @@ class HeadScripts {
   }
 }
 
-const hscripts = new HeadScripts();
-hscripts.__init();
+document.addEventListener( 'DOMContentLoaded', function () {
+  const hscripts = new HeadScripts();
+  hscripts.__init();
+});
