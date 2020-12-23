@@ -1,4 +1,3 @@
-import Vendors from './../../../../assets/scripts/_vendors.es';
 import SiteHeader from '../../../../components/siteheader/_index.es';
 import SiteFooter from '../../../../components/sitefooter/_index.es';
 import {_AddClass, _RemoveClass, _LandscapeCSSClass, _PortraitCSSClass, _GetElemDimensions} from './../../../../assets/scripts/_constants.es';
@@ -7,7 +6,7 @@ let bodyElem;
 let bgElements;
 let bgElementDimension;
 
-class GlobalScripts {
+export default class GlobalScripts {
   constructor() {}
   reportWindowOrientation() {
     setTimeout(() => {
@@ -41,9 +40,7 @@ class GlobalScripts {
     window.addEventListener('resize', this.reportWindowOrientation, false);
 
     const siteheader = new SiteHeader();
-    const vendors = new Vendors();
     siteheader.__init();
-    vendors.__init();
   }
   __init() {
     const sitefooter = new SiteFooter();

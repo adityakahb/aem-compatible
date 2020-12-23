@@ -1,9 +1,10 @@
 import "core-js/stable";
-
+import FormValidators from './../../../../assets/scripts/_form-validators.es';
 class Registration {
   constructor() {}
   __init() {
-
+    const formValidators = new FormValidators();
+    formValidators.__init();
   }
 }
 

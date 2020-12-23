@@ -6,8 +6,8 @@
   "scripts": {
     "build:dev": "webpack --watch --mode development",
     "build:prod": "webpack --mode production",
-    "test:chrome": "cypress run --browser chrome --spec cypress/integration/home/home.spec.js",
-    "test:firefox": "cypress run --browser firefox --spec cypress/integration/home/home.spec.js",
+    "test:chrome": "cypress run --browser chrome",
+    "test:firefox": "cypress run --browser firefox",
     "test": "npm run test:chrome && npm run test:firefox"
   },
   "author": "",
@@ -47,6 +47,7 @@
     "picturefill": "^3.0.3",
     "popper.js": "^1.16.1",
     "stickybits": "^3.7.8",
-    "swiper": "^6.4.5"
+    "swiper": "^6.4.5",
+    "validate.js": "^0.13.1"
   }
 }

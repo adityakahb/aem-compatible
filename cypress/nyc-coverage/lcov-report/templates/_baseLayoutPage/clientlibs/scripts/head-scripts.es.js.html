@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
@@ -39,7 +39,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -71,42 +71,60 @@
 <a name='L12'></a><a href='#L12'>12</a>
 <a name='L13'></a><a href='#L13'>13</a>
 <a name='L14'></a><a href='#L14'>14</a>
-<a name='L15'></a><a href='#L15'>15</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span></td><td class="text"><pre class="prettyprint lang-js">import lazysizes from 'lazysizes';
-import picturefill from 'picturefill';
-&nbsp;
-class HeadScripts {
-  constructor() {}
-  
-  __init() {
-    <span class="missing-if-branch" title="else path not taken" >E</span>if(typeof picturefill === "function") {
-      picturefill();
-    }
-  }
-}
-&nbsp;
-const hscripts = new HeadScripts();
-hscripts.__init();</pre></td></tr></table></pre>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span>
+<span class="cline-any cline-no">0</span></td><td class="text"><pre class="prettyprint lang-js">Cannot read property 'decl' of undefined
+TypeError: Cannot read property 'decl' of undefined
+    at C:\MAMP\htdocs\aem-compatible\node_modules\istanbul-reports\lib\html\annotator.js:89:31
+    at Array.forEach (<anonymous>)
+    at annotateFunctions (C:\MAMP\htdocs\aem-compatible\node_modules\istanbul-reports\lib\html\annotator.js:86:29)
+    at annotateSourceCode (C:\MAMP\htdocs\aem-compatible\node_modules\istanbul-reports\lib\html\annotator.js:234:9)
+    at HtmlReport.onDetail (C:\MAMP\htdocs\aem-compatible\node_modules\istanbul-reports\lib\html\index.js:409:33)
+    at LcovReport.<computed> [as onDetail] (C:\MAMP\htdocs\aem-compatible\node_modules\istanbul-reports\lib\lcov\index.js:28:23)
+    at Visitor.value (C:\MAMP\htdocs\aem-compatible\node_modules\istanbul-lib-report\lib\tree.js:38:38)
+    at ReportNode.visit (C:\MAMP\htdocs\aem-compatible\node_modules\istanbul-lib-report\lib\tree.js:88:21)
+    at C:\MAMP\htdocs\aem-compatible\node_modules\istanbul-lib-report\lib\tree.js:92:19
+    at Array.forEach (<anonymous>)
+    at ReportNode.visit (C:\MAMP\htdocs\aem-compatible\node_modules\istanbul-lib-report\lib\tree.js:91:28)
+    at C:\MAMP\htdocs\aem-compatible\node_modules\istanbul-lib-report\lib\tree.js:92:19
+    at Array.forEach (<anonymous>)
+    at ReportNode.visit (C:\MAMP\htdocs\aem-compatible\node_modules\istanbul-lib-report\lib\tree.js:91:28)
+    at ReportTree.visit (C:\MAMP\htdocs\aem-compatible\node_modules\istanbul-lib-report\lib\tree.js:127:24)
+    at LcovReport.execute (C:\MAMP\htdocs\aem-compatible\node_modules\istanbul-lib-report\lib\report-base.js:12:44)
+    at C:\MAMP\htdocs\aem-compatible\node_modules\nyc\index.js:467:10
+    at Array.forEach (<anonymous>)
+    at NYC.report (C:\MAMP\htdocs\aem-compatible\node_modules\nyc\index.js:461:19)</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Dec 22 2020 22:44:48 GMT+0530 (India Standard Time)
+                at Wed Dec 23 2020 23:45:07 GMT+0530 (India Standard Time)
             </div>
         </div>
         <script src="../../../../prettify.js"></script>

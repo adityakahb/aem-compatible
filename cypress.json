@@ -1,6 +1,7 @@
 {
   "projectId": "okall",
   "reporterOptions": {
+    "testFiles": "cypress/integration/e2e/**/*.*",
     "overwrite": false,
     "html": true,
     "json": true,

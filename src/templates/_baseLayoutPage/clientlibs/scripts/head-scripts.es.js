@@ -1,7 +1,7 @@
 import 'lazysizes';
 import picturefill from 'picturefill';
 
-class HeadScripts {
+export default class HeadScripts {
   constructor() {}
   
   __init() {
