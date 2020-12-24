@@ -1,57 +1,122 @@
 import validate from 'validate.js';
-import { _ArrayCall } from './_constants.es';
+import { _AddClass, _RemoveClass, _ArrayCall } from './_constants.es';
+
+const resetFormGroup = (formGroup) => {
+  if (formGroup) {
+    _RemoveClass(formGroup, 'has-error has-success');
+    console.log('============length', _ArrayCall(formGroup.querySelectorAll('.help-block.error') || []).length);
+    _ArrayCall(formGroup.querySelectorAll('.help-block.error') || []).forEach(el => {
+      el.parentNode.removeChild(el);
+    });
+  }
+};
+
+const addError = (errorContainer, msg) => {
+  let block = document.createElement("p");
+  _AddClass(block, 'help-block error');
+  block.innerText = msg;
+  errorContainer.appendChild(block);
+};
+
+const showErrorForElement = (formitem, errors) => {
+  resetFormGroup(formitem.formGroup);
+  if (errors) {
+    _AddClass(formitem.formGroup, 'has-error');
+    errors.forEach(error => {
+      addError(formitem.messageElem, error);
+    });
+  } else {
+    _AddClass(formitem.formGroup, 'has-success');
+  }
+};
+
+const showErrors = (formObj, errors) => {
+  (formObj.elements || []).forEach(item => {
+    showErrorForElement(item, errors && errors[item.name]);
+  });
+};
+
+const elementChangeEvent = (formObj, item) => {
+  return () => {
+    let errors = validate(formObj.form, formObj.constraints);
+    showErrorForElement(item, errors && errors[item.name]);
+  };
+};
+
+const formSubmitEvent = (formObj) =>{
+  return () => {
+    if (event && formObj.form) {
+      event.preventDefault();
+    }
+    let errors = validate(formObj.form, formObj.constraints);
+    if (errors) {
+      showErrors(formObj, errors);
+    } else {
+      alert('All passed');
+    }
+    // if (!errors) {
+    //   // return true;
+    //   alert('All passed');
+    // }
+  };
+};
 
 export default class FormValidators {
   constructor() {
     this.aemForms = [];
   }
-  formSubmitEvent(form, constraints) {
-    return () => {
-      if (event && form) {
-        event.preventDefault();
-      }
-      let errors = validate(form, constraints);
-      console.log('========errors', errors);
-    };
-  }
   __init() {
-
     _ArrayCall(document.querySelectorAll('[data-aemvalidate="true"]') || []).forEach(element => {
       let formObj = {};
-      let constraints = {};
+      formObj.constraints = {};
       let submitFn;
 
       let validatingElems = _ArrayCall(element.querySelectorAll('[data-rules]') || []);
+      formObj.elements = [];
       validatingElems.forEach(childElem => {
+        let childObj = {};
         let rulesObj = JSON.parse(childElem.getAttribute('data-rules'));
         let childElemName = childElem.getAttribute('name');
-        constraints[childElemName] = {};
+        let changeEvent;
+
+        formObj.constraints[childElemName] = {};
         if (rulesObj.required) {
-          constraints[childElemName].presence = {message: '^' + rulesObj.required.message || ''};
+          formObj.constraints[childElemName].presence = {message: '^' + rulesObj.required.message || ''};
         }
         if (rulesObj.email) {
-          constraints[childElemName].email = {message: '^' + rulesObj.email.message || ''};
+          formObj.constraints[childElemName].email = {message: '^' + rulesObj.email.message || ''};
         }
         if (rulesObj.format) {
-          constraints[childElemName].format = {
+          formObj.constraints[childElemName].format = {
             pattern: rulesObj.format.pattern,
             message: '^' + rulesObj.format.message || ''
           };
         }
         if (rulesObj.equal) {
-          constraints[childElemName].equality = {
+          formObj.constraints[childElemName].equality = {
             attribute: rulesObj.equal.to,
             message: '^' + rulesObj.equal.message || ''
           };
         }
+        childObj.name = childElemName;
+        childObj.rules = rulesObj;
+        childObj.messageElem = element.querySelector(`[data-forname="${childElemName}"]`);
+        childObj.formGroup = childElem.closest('.form-group');
+        
+        if (!changeEvent) {
+          changeEvent = elementChangeEvent(formObj, childObj);
+        }
+        childElem.addEventListener('keyup', changeEvent, false);
+
+        childObj.element = childElem;
+        formObj.elements.push(childObj);
       });
       if (!submitFn) {
-        submitFn = this.formSubmitEvent(element, constraints);
+        submitFn = formSubmitEvent(formObj);
       }
-      element.addEventListener('submit', submitFn);
-      formObj.formElem = element;
+      element.addEventListener('submit', submitFn, false);
       formObj.submitFn = submitFn;
-      formObj.constraints = constraints;
+      formObj.form = element;
       this.aemForms.push(formObj);
     });
   }

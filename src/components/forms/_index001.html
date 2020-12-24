@@ -2,10 +2,10 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <form class="needs-validation" data-aemvalidate="true" novalidate>
+        <form data-aemvalidate="true" novalidate>
           <div class="form-group">
             <label for="registration_email"><strong>Email</strong><strong aria-hidden="true" class="text-danger ml-2">*</strong></label>
-            <input type="email" class="form-control" id="registration_email" name="registration_email" data-rules='{
+            <input type="email" class="form-control" id="registration_email" name="registration_email" required data-rules='{
               "required": {
                 "message": "Email is required."
               },
@@ -13,7 +13,7 @@
                 "message": "Please enter a valid email address."
               }
             }'/>
-            <div class="invalid-feedback"></div>
+            <div class="toggle-feedback text-danger" data-forname="registration_email"></div>
           </div>
           <div class="form-group">
             <label for="registration_password"><strong>Password</strong><strong aria-hidden="true" class="text-danger ml-2">*</strong></label>
@@ -23,10 +23,10 @@
               },
               "format": {
                 "pattern": "/^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/",
-                "message": "Please follow the required format."
+                "message": "Password must follow the required format."
               }
             }'/>
-            <div class="invalid-feedback"></div>
+            <div class="toggle-feedback text-danger" data-forname="registration_password"></div>
           </div>
           <div class="form-group">
             <label for="registration_repassword"><strong>Retype Password</strong><strong aria-hidden="true" class="text-danger ml-2">*</strong></label>
@@ -36,14 +36,14 @@
               },
               "format": {
                 "pattern": "/^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/",
-                "message": "Please follow the required format."
+                "message": "Password must follow the required format."
               },
               "equal": {
                 "to": "registration_password",
                 "message": "The passwords do not match."
               }
             }'/>
-            <div class="invalid-feedback"></div>
+            <div class="toggle-feedback text-danger" data-forname="registration_repassword"></div>
           </div>
           <hr class="my-4"/>
           <!-- <div class="form-group">
