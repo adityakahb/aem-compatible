@@ -16,6 +16,7 @@
     "Atomics": "readonly",
     "jquery": true,
     "lazysizes": true,
+    "flatpickr": true,
     "Cypress": true,
     "cy": true,
     "SharedArrayBuffer": "readonly"

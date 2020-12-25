@@ -47,7 +47,7 @@
             <input type="password" class="form-control" id="registration_repassword" name="registration_repassword" required data-aemrules='{
               "required":  {
                 "value": true,
-                "message": "Password is required."
+                "message": "Password confirmation is required."
               },
               "pattern": {
                 "value": "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\\s).{8,}$",
@@ -56,6 +56,16 @@
               "equalTo": {
                 "value": "registration_password",
                 "message": "The passwords need to match."
+              }
+            }'/>
+            <div class="error-placement my-2 text-danger font-weight-bold small"></div>
+          </div>
+          <div class="form-group">
+            <label for="registration_dob"><strong>Date of Birth</strong><strong aria-hidden="true" class="text-danger ml-2">*</strong></label>
+            <input type="date" class="form-control" id="registration_dob" name="registration_dob" required data-isdatepicker="true" data-aemrules='{
+              "required":  {
+                "value": true,
+                "message": "Date of birth is required."
               }
             }'/>
             <div class="error-placement my-2 text-danger font-weight-bold small"></div>
@@ -162,7 +172,7 @@
                   "message": "Terms and conditions must be accepted."
                 }
               }'>
-              <label class="custom-control-label" for="registration_terms">I confirm that I've' read the <a href="#">Privacy policy</a> and I agree to the <a href="#">Terms &amp; Conditions</a>.</a></label>
+              <label class="custom-control-label" for="registration_terms">I confirm that I've' read the <a href="#">Privacy policy</a> and I agree to the <a href="#">Terms &amp; Conditions</a>.</label>
               <div class="error-placement my-2 text-danger font-weight-bold small"></div>
             </div>
           </div>

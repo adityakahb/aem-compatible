@@ -1,13 +1,19 @@
 import 'jquery-validation/dist/jquery.validate';
 import 'jquery-validation/dist/additional-methods';
-
-import {__aemFormInvalidElementClass} from './_constants.es';
+import 'flatpickr/dist/flatpickr';
+import {_ArrayCall, __aemFormInvalidElementClass} from './_constants.es';
 
 export default class FormValidators {
   constructor() {
     this.aemForms = [];
   }
   __init() {
+    const dpElem = _ArrayCall(document.querySelectorAll('[data-isdatepicker="true"]') || []);
+    dpElem.forEach(dp => {
+      if (flatpickr) {
+        flatpickr(dp, {});
+      }
+    });
     if ($) {
       $('[data-aemvalidate="true"]').each((formindex, form) => {
         let formObj = {};

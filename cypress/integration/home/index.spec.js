@@ -1,5 +1,7 @@
+/// <reference types="Cypress" />
+
 context('Actions', () => {
-  beforeEach(() => {
+  beforeAll(() => {
     cy.visit('http://localhost/aem-compatible/src/templates/home/index.html');
   });
 
