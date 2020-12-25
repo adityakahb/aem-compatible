@@ -1,3 +1,6 @@
 module.exports = {
-  'report-dir': './cypress/nyc-coverage'
+  "instrument": false,
+  "report-dir": "./cypress/nyc-coverage",
+  "reporter": "html",
+  "sourceMap": false
 }
