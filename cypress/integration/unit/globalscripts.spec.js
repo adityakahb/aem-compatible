@@ -1,1 +1,0 @@
-import GlobalScripts from './../../../src/templates/_baseLayoutPage/clientlibs/scripts/index.es';

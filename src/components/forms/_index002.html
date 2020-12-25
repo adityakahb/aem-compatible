@@ -1,0 +1,61 @@
+<div class="max-wrap-half">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <form data-aemvalidate="true" novalidate>
+          <div class="form-group">
+            <div class="alert alert-danger" role="alert">
+              A simple danger alert with <a href="#" class="alert-link">an example link</a>. This can show errors related to login.
+            </div>
+            <hr class="my-4"/>
+          </div>
+          <div class="form-group">
+            <label for="login_email"><strong>Email</strong><strong aria-hidden="true" class="text-warning ml-2">*</strong></label>
+            <input type="email" class="form-control" id="login_email" name="login_email" required data-aemrules='{
+              "required": {
+                "value": true,
+                "message": "Email is required."
+              },
+              "email":  {
+                "value": true,
+                "message": "Please enter a valid email address."
+              }
+            }'/>
+            <div class="error-placement my-2 text-warning font-weight-bold small"></div>
+          </div>
+          <div class="form-group">
+            <label for="login_password"><strong>Password</strong><strong aria-hidden="true" class="text-warning ml-2">*</strong></label>
+            <div class="input-group">
+              <input type="password" class="form-control" id="login_password" name="login_password" required data-aemrules='{
+                "required":  {
+                  "value": true,
+                  "message": "Password is required."
+                },
+                "pattern": {
+                  "value": "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\\s).{8,}$",
+                  "message": "Password must follow the required format."
+                }
+              }'/>
+              <div class="input-group-append">
+                <button class="btn btn-outline-light" type="button"><i class="bi bi-eye"></i></button>
+              </div>
+            </div>
+            <div class="error-placement my-2 text-warning font-weight-bold small"></div>
+          </div>
+          <hr class="my-4"/>
+          <div class="form-group">
+            <div class="custom-control custom-checkbox">
+              <input name="login_staysigned" type="checkbox" class="custom-control-input" id="login_staysigned">
+              <label class="custom-control-label" for="login_staysigned">Stay signed in.</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-lg mr-3">Login <i class="bi bi-chevron-right"></i></button>
+            <a href="#">Forgot password?</a>
+            <!-- <button type="button" class="btn btn-outline-secondary btn-sm">Cancel</button> -->
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
