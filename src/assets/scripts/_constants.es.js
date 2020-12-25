@@ -1,9 +1,11 @@
-export const _HeaderHeightMobile = '64';
-export const _HeaderHeightDesktop = '96';
-export const _HeaderBreakpoint = '768';
-export const _LandscapeCSSClass = 'is-landscape';
-export const _PortraitCSSClass = 'is-portrait';
-export const _DefaultCarouselOptions = {
+export const __aemHeaderHeightMobile = '64';
+export const __aemHeaderHeightDesktop = '96';
+export const __aemHeaderBreakpoint = '768';
+export const __aemLandscapeCSSClass = 'is-landscape';
+export const __aemPortraitCSSClass = 'is-portrait';
+export const __aemFormValidElementClass = 'is-valid';
+export const __aemFormInvalidElementClass = 'is-invalid';
+export const __aemDefaultCarouselOptions = {
   loop: true,
   navigation: {
     nextEl: '.swiper-button-next>button',
@@ -24,7 +26,7 @@ export const _DefaultCarouselOptions = {
     }
   }
 };
-export const _GetElemDimensions = function (elem) {
+export const __aemGetElementDimensions = function (elem) {
   try {
     let docElem, win, box = {
         top: 0,
@@ -60,7 +62,7 @@ export const _GetElemDimensions = function (elem) {
     };
   }
 };
-export const _StringTrim = function (str) {
+export const __aemStringTrim = function (str) {
   return str.replace(/^\s+|\s+$/g, '');
 };
 export const _ArrayCall = function (arr) {
@@ -70,27 +72,27 @@ export const _ArrayCall = function (arr) {
     return [];
   }
 };
-export const _HasClass = function (element, cls) {
+export const __aemHasClass = function (element, cls) {
   if (element) {
     let clsarr = element.className.split(' ');
     return clsarr.indexOf(cls) > -1 ? true : false;
   }
   return false;
 };
-export const _AddClass = function (element, cls) {
+export const __aemAddClass = function (element, cls) {
   if (element) {
     let clsarr = cls.split(' ');
     let clsarrLength = clsarr.length;
     for (let i = 0; i < clsarrLength; i++) {
       let thiscls = clsarr[i];
-      if (!_HasClass(element, thiscls)) {
+      if (!__aemHasClass(element, thiscls)) {
         element.className += ' ' + thiscls;
       }
     }
-    element.className = _StringTrim(element.className);
+    element.className = __aemStringTrim(element.className);
   }
 };
-export const _RemoveClass = function (element, cls) {
+export const __aemRemoveClass = function (element, cls) {
   if (element) {
     let clsarr = cls.split(' ');
     let curclass = element.className.split(' ');
@@ -102,6 +104,6 @@ export const _RemoveClass = function (element, cls) {
         i--;
       }
     }
-    element.className = _StringTrim(curclass.join(' '));
+    element.className = __aemStringTrim(curclass.join(' '));
   }
 };

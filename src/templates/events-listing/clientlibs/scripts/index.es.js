@@ -1,7 +1,7 @@
 import "core-js/stable";
 import stickybits from 'stickybits';
 import GridCarousel from '../../../../components/grid-carousel/_index.es';
-import {_HeaderHeightMobile, _HeaderHeightDesktop, _HeaderBreakpoint} from './../../../../assets/scripts/_constants.es';
+import {__aemHeaderHeightMobile, __aemHeaderHeightDesktop, __aemHeaderBreakpoint} from './../../../../assets/scripts/_constants.es';
 
 let stickySearchFilters;
 let stickySearchElem;
@@ -10,16 +10,16 @@ class EventsListing {
   constructor() {}
   resetAndInvokeSticky() {
     if (stickySearchElem) {
-      if (window.innerWidth < parseInt(_HeaderBreakpoint)) {
+      if (window.innerWidth < parseInt(__aemHeaderBreakpoint)) {
         if (stickySearchFilters) {
           stickySearchFilters.cleanup();
         }
-        stickySearchFilters = stickybits('#sticky_events', {stickyBitStickyOffset: parseInt(_HeaderHeightMobile), useStickyClasses: true});
+        stickySearchFilters = stickybits('#sticky_events', {stickyBitStickyOffset: parseInt(__aemHeaderHeightMobile), useStickyClasses: true});
       } else {
         if (stickySearchFilters) {
           stickySearchFilters.cleanup();
         }
-        stickySearchFilters = stickybits('#sticky_events', {stickyBitStickyOffset: parseInt(_HeaderHeightDesktop), useStickyClasses: true});
+        stickySearchFilters = stickybits('#sticky_events', {stickyBitStickyOffset: parseInt(__aemHeaderHeightDesktop), useStickyClasses: true});
       }
     }
   }

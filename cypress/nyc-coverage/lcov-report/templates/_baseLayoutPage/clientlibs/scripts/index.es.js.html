@@ -177,7 +177,7 @@
 <span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-yes">10x</span></td><td class="text"><pre class="prettyprint lang-js">import SiteHeader from '../../../../components/siteheader/_index.es';
 import SiteFooter from '../../../../components/sitefooter/_index.es';
-import {_AddClass, _RemoveClass, _LandscapeCSSClass, _PortraitCSSClass, _GetElemDimensions} from './../../../../assets/scripts/_constants.es';
+import {__aemAddClass, __aemRemoveClass, _LandscapeCSSClass, _PortraitCSSClass, _GetElemDimensions} from './../../../../assets/scripts/_constants.es';
 &nbsp;
 let bodyElem;
 let bgElements;
@@ -191,22 +191,22 @@ export default class GlobalScripts {
         bgElements.forEach(element =&gt; {
     <span class="missing-if-branch" title="else path not taken" >E</span>      bgElementDime<span class="branch-1 cbranch-no" title="branch not covered" >nsi</span>on = _GetElemDimensions(element);
           if (bgElementDimension.height &gt; bgElementDimension.width) {
-            _AddClass(element, _PortraitCSSClass);
-            _RemoveClass(element, _LandscapeCSSClass);
+            __aemAddClass(element, _PortraitCSSClass);
+            __aemRemoveClass(element, _LandscapeCSSClass);
           }
           if (bgElementDimension.height &lt;= bgElementDimension.width) {
-            _RemoveClass(element, _PortraitCSSClass);
-            _AddClass(element, _LandscapeCSSClass);
+            __aemRemoveClass(element, _PortraitCSSClass);
+            __aemAddClass(element, _LandscapeCSSClass);
           }
         });
       }
       if (bodyElem &amp;&amp; window.innerHeight &gt; window.innerWidth) {
-        _AddClass(bodyElem, _PortraitCSSClass);
-        _RemoveClass(bodyElem, _LandscapeCSSClass);
+        __aemAddClass(bodyElem, _PortraitCSSClass);
+        __aemRemoveClass(bodyElem, _LandscapeCSSClass);
       }
       if (bodyElem &amp;&amp; window.innerHeight &lt;= window.innerWidth) {
-        _RemoveClass(bodyElem, _PortraitCSSClass);
-        _AddClass(bodyElem, _LandscapeCSSClass);
+        __aemRemoveClass(bodyElem, _PortraitCSSClass);
+        __aemAddClass(bodyElem, _LandscapeCSSClass);
       }
     }, 0);
   }

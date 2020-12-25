@@ -5,72 +5,79 @@
         <form data-aemvalidate="true" novalidate>
           <div class="form-group">
             <label for="registration_email"><strong>Email</strong><strong aria-hidden="true" class="text-danger ml-2">*</strong></label>
-            <input type="email" class="form-control" id="registration_email" name="registration_email" required data-rules='{
+            <input type="email" class="form-control" id="registration_email" name="registration_email" required data-aemrules='{
               "required": {
+                "value": true,
                 "message": "Email is required."
               },
               "email":  {
+                "value": true,
                 "message": "Please enter a valid email address."
               }
             }'/>
-            <div class="toggle-feedback text-danger" data-forname="registration_email"></div>
           </div>
           <div class="form-group">
             <label for="registration_password"><strong>Password</strong><strong aria-hidden="true" class="text-danger ml-2">*</strong></label>
-            <input type="password" class="form-control" id="registration_password" name="registration_password" required data-rules='{
+            <input type="password" class="form-control" id="registration_password" name="registration_password" required data-aemrules='{
               "required":  {
+                "value": true,
                 "message": "Password is required."
               },
-              "format": {
-                "pattern": "/^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/",
+              "pattern": {
+                "value": "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\\s).{8,}$",
                 "message": "Password must follow the required format."
               }
             }'/>
-            <div class="toggle-feedback text-danger" data-forname="registration_password"></div>
           </div>
           <div class="form-group">
             <label for="registration_repassword"><strong>Retype Password</strong><strong aria-hidden="true" class="text-danger ml-2">*</strong></label>
-            <input type="password" class="form-control" id="registration_repassword" name="registration_repassword" required data-rules='{
+            <input type="password" class="form-control" id="registration_repassword" name="registration_repassword" required data-aemrules='{
               "required":  {
-                "message": "Password confirmation is required."
+                "value": true,
+                "message": "Password is required."
               },
-              "format": {
-                "pattern": "/^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/",
+              "pattern": {
+                "value": "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\\s).{8,}$",
                 "message": "Password must follow the required format."
               },
-              "equal": {
-                "to": "registration_password",
-                "message": "The passwords do not match."
+              "equalTo": {
+                "value": "registration_password",
+                "message": "The passwords need to match."
               }
             }'/>
-            <div class="toggle-feedback text-danger" data-forname="registration_repassword"></div>
           </div>
           <hr class="my-4"/>
-          <!-- <div class="form-group">
+          <div class="form-group">
             <label for="registration_title"><strong>Title</strong><strong aria-hidden="true" class="text-danger ml-2">*</strong></label>
-            <select class="form-control custom-select" id="registration_title" required>
-              <option>Select one</option>
-              <option>Mr.</option>
-              <option>Mrs.</option>
-              <option>Ms.</option>
+            <select class="form-control custom-select" id="registration_title" name="registration_title" required data-aemrules='{
+              "required":  {
+                "value": true,
+                "message": "Title is required."
+              }
+            }'>
+              <option value="">Select one</option>
+              <option value="mr">Mr.</option>
+              <option value="mrs">Mrs.</option>
+              <option value="ms">Ms.</option>
             </select>
-            <div class="invalid-feedback">
-              Please let us know how we should address you.
-            </div>
           </div>
           <div class="form-group">
             <label for="registration_firstname"><strong>First name</strong><strong aria-hidden="true" class="text-danger ml-2">*</strong></label>
-            <input type="text" class="form-control" id="registration_firstname" required/>
-            <div class="invalid-feedback">
-              Well?
-            </div>
+            <input type="text" class="form-control" id="registration_firstname" name="registration_firstname" required data-aemrules='{
+              "required":  {
+                "value": true,
+                "message": "First name is required."
+              }
+            }'/>
           </div>
           <div class="form-group">
             <label for="registration_lastname"><strong>Last name</strong><strong aria-hidden="true" class="text-danger ml-2">*</strong></label>
-            <input type="text" class="form-control" id="registration_lastname" required/>
-            <div class="invalid-feedback">
-              Come on...
-            </div>
+            <input type="text" class="form-control" id="registration_lastname" name="registration_lastname" required data-aemrules='{
+              "required":  {
+                "value": true,
+                "message": "Last name is required."
+              }
+            }'/>
           </div>
           <div class="form-group">
             <label for="registration_jobtitle"><strong>Job Title</strong></label>
@@ -78,10 +85,13 @@
           </div>
           <div class="form-group">
             <label for="registration_company"><strong>Company</strong><strong aria-hidden="true" class="text-danger ml-2">*</strong></label>
-            <input type="text" class="form-control" id="registration_company" required/>
-            <div class="invalid-feedback">
-              Shouldn't we know the company you are representing?
-            </div>
+            <input type="text" class="form-control" id="registration_company" name="registration_company" required data-aemrules='{
+              "required":  {
+                "value": true,
+                "message": "Company is required."
+              }
+            }'/>
+            <div class="toggle-feedback text-danger" data-forname="registration_company"></div>
           </div>
           <div class="form-group">
             <label for="registration_profilepic"><strong>Profile Picture</strong></label>
@@ -93,7 +103,16 @@
           <div class="form-group">
             <label for="registration_corporatereporting"><strong>Areas of interest</strong></label>
             <div class="custom-control custom-checkbox">
-              <input name="registration_areasofinterest" type="checkbox" class="custom-control-input" id="registration_corporatereporting">
+              <input name="registration_areasofinterest" type="checkbox" class="custom-control-input" id="registration_corporatereporting" data-aemrules='{
+                "required":  {
+                  "value": true,
+                  "message": "Areas of interests are required."
+                },
+                "minlength": {
+                  "value": 2,
+                  "message": "Please select atleast 2."
+                }
+              }'>
               <label class="custom-control-label" for="registration_corporatereporting">Corporate Reporting</label>
             </div>
             <div class="custom-control custom-checkbox">
@@ -108,9 +127,10 @@
               <input name="registration_areasofinterest" type="checkbox" class="custom-control-input" id="registration_employeecommunications">
               <label class="custom-control-label" for="registration_employeecommunications">Employee Communications</label>
             </div>
+            <div class="toggle-feedback text-danger" data-forname="registration_areasofinterest"></div>
           </div>
           <hr class="my-4"/>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <div class="custom-control custom-checkbox">
               <input name="registration_newsletter" type="checkbox" class="custom-control-input" id="registration_newsletter">
               <label class="custom-control-label" for="registration_newsletter">I'd like to receive the weekly newsletter</label>

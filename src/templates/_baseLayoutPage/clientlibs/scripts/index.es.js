@@ -1,6 +1,6 @@
 import SiteHeader from '../../../../components/siteheader/_index.es';
 import SiteFooter from '../../../../components/sitefooter/_index.es';
-import {_AddClass, _RemoveClass, _LandscapeCSSClass, _PortraitCSSClass, _GetElemDimensions} from './../../../../assets/scripts/_constants.es';
+import {__aemAddClass, __aemRemoveClass, __aemLandscapeCSSClass, __aemPortraitCSSClass, __aemGetElementDimensions} from './../../../../assets/scripts/_constants.es';
 
 let bodyElem;
 let bgElements;
@@ -12,24 +12,24 @@ export default class GlobalScripts {
     setTimeout(() => {
       if ((bgElements || []).length > 0) {
         bgElements.forEach(element => {
-          bgElementDimension = _GetElemDimensions(element);
+          bgElementDimension = __aemGetElementDimensions(element);
           if (bgElementDimension.height > bgElementDimension.width) {
-            _AddClass(element, _PortraitCSSClass);
-            _RemoveClass(element, _LandscapeCSSClass);
+            __aemAddClass(element, __aemPortraitCSSClass);
+            __aemRemoveClass(element, __aemLandscapeCSSClass);
           }
           if (bgElementDimension.height <= bgElementDimension.width) {
-            _RemoveClass(element, _PortraitCSSClass);
-            _AddClass(element, _LandscapeCSSClass);
+            __aemRemoveClass(element, __aemPortraitCSSClass);
+            __aemAddClass(element, __aemLandscapeCSSClass);
           }
         });
       }
       if (bodyElem && window.innerHeight > window.innerWidth) {
-        _AddClass(bodyElem, _PortraitCSSClass);
-        _RemoveClass(bodyElem, _LandscapeCSSClass);
+        __aemAddClass(bodyElem, __aemPortraitCSSClass);
+        __aemRemoveClass(bodyElem, __aemLandscapeCSSClass);
       }
       if (bodyElem && window.innerHeight <= window.innerWidth) {
-        _RemoveClass(bodyElem, _PortraitCSSClass);
-        _AddClass(bodyElem, _LandscapeCSSClass);
+        __aemRemoveClass(bodyElem, __aemPortraitCSSClass);
+        __aemAddClass(bodyElem, __aemLandscapeCSSClass);
       }
     }, 0);
   }
