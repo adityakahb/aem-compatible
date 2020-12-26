@@ -1,8 +1,8 @@
 /// <reference types="Cypress" />
 
 context('Actions', () => {
-  beforeAll(() => {
-    cy.visit('http://localhost/aem-compatible/src/templates/search-results/index.html');
+  before(() => {
+    cy.visit(`${Cypress.env('env')[Cypress.env('process_env')]._base}${Cypress.env('env')[Cypress.env('process_env')].searchresults}`);
   });
 
   it('Check homepage', () => {

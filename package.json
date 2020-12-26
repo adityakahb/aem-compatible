@@ -6,9 +6,7 @@
   "scripts": {
     "build:dev": "webpack --watch --mode development",
     "build:prod": "webpack --mode production",
-    "test:chrome": "cypress run --browser chrome",
-    "test:firefox": "cypress run --browser firefox",
-    "test": "npm run test:chrome && npm run test:firefox"
+    "test": "node scripts/npm-cypress.js"
   },
   "author": "",
   "license": "ISC",
